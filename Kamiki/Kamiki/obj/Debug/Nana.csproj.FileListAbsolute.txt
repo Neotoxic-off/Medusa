@@ -1,0 +1,26 @@
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.Properties.Resources.resources
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Nana.csproj.GenerateResource.cache
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Nana.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Nana.csprojAssemblyReference.cache
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Nana.csproj.CopyComplete
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Y u m e k o.exe.config
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Y u m e k o.exe
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Y u m e k o.pdb
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Y u m e k o.exe
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Y u m e k o.pdb
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.Yumeko.resources
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Y u m e k o.exe.config
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Y u m e k o.exe
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Y u m e k o.pdb
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Nana.csprojAssemblyReference.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.Yumeko.resources
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.Properties.Resources.resources
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Nana.csproj.GenerateResource.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Nana.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Nana.csproj.CopyComplete
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Y u m e k o.exe
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Y u m e k o.pdb

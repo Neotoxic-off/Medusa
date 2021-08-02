@@ -1,0 +1,8 @@
+﻿  Source2.cpp
+  Génération de code en cours
+C:\Users\paulg\Desktop\Cheats\Injector\Injector\Injector\Source2.cpp(18): warning C4715: 'chooseDLL' : les chemins de contrôle ne retournent pas tous une valeur
+  2 of 80 functions ( 2.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Fin de la génération du code
+  Injector.vcxproj -> C:\Users\paulg\Desktop\Cheats\Injector\Injector\Release\Injector.exe

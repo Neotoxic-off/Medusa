@@ -1,0 +1,24 @@
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Kamiki.exe.config
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Kamiki.exe
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\bin\Debug\Kamiki.pdb
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.csprojAssemblyReference.cache
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.Form1.resources
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.Properties.Resources.resources
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.csproj.GenerateResource.cache
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.exe
+C:\Users\paulg\Desktop\Cheats\Kamiki\Kamiki\obj\Debug\Kamiki.pdb
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.csprojAssemblyReference.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.Kamiki.resources
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.Properties.Resources.resources
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.csproj.GenerateResource.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Kamiki.exe.config
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Kamiki.exe
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Kamiki.pdb
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.csproj.CopyComplete
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.exe
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.pdb
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Debug\Kamiki.Items_editor.resources

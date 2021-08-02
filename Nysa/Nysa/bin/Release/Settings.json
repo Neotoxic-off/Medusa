@@ -1,0 +1,13 @@
+{
+    "version" : "1.0.0",
+    "pure" : true,
+    "color" : "#100a17",
+    "tools" : [
+        {
+            "name" : "R-Unlocker",
+            "link" : "https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/R-Unlocker.rar",
+            "version" : "1.0.0"
+        }
+    ]
+}
+

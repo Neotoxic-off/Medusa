@@ -1,0 +1,14 @@
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Release\Kamiki.exe.config
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Release\Kamiki.exe
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Release\Kamiki.pdb
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Release\Newtonsoft.Json.dll
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\bin\Release\Newtonsoft.Json.xml
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.csprojAssemblyReference.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.Kamiki.resources
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.Properties.Resources.resources
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.csproj.GenerateResource.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.csproj.CopyComplete
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.exe
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.pdb
+C:\Users\paulg\Desktop\Cheats\DEAD BY DAYLIGHT\Kamiki\Kamiki\obj\Release\Kamiki.Items_editor.resources

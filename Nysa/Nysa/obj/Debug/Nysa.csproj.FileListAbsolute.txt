@@ -1,0 +1,13 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Debug\Nysa.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Debug\Nysa.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Debug\Nysa.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.Nysa.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Debug\Nysa.csproj.CopyComplete

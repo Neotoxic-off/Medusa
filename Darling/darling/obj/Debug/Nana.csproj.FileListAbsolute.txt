@@ -1,0 +1,16 @@
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Nana.csprojAssemblyReference.cache
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Playername.Playername.resources
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Nana.csproj.GenerateResource.cache
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Nana.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\Nana.exe.config
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\Nana.exe
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\Nana.pdb
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\BCMakeCert.dll
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\FiddlerCore.dll
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\Telerik.NetworkConnections.dll
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Nana.Properties.Resources.resources
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Nana.csproj.CopyComplete
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Nana.exe
+C:\Users\paulg\Desktop\Cheats\Playername\Playername\obj\Debug\Nana.pdb

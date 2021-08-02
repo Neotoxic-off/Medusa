@@ -1,0 +1,36 @@
+﻿  Source2.cpp
+C:\Users\paulg\Desktop\Cheats\Injector\Injector\Injector\Source2.cpp(17): warning C4715: 'chooseDLL' : les chemins de contrôle ne retournent pas tous une valeur
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: symbole externe non résolu __free_dbg
+Source2.obj : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(locale0.obj) : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(cout.obj) : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: symbole externe non résolu __free_dbg
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+Source2.obj : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(locale0.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(cout.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: symbole externe non résolu __malloc_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: symbole externe non résolu __CrtDbgReport
+Source2.obj : error LNK2001: symbole externe non résolu __CrtDbgReport
+libcpmtd.lib(cout.obj) : error LNK2001: symbole externe non résolu __CrtDbgReport
+libcpmtd.lib(locale.obj) : error LNK2001: symbole externe non résolu __CrtDbgReport
+libcpmtd.lib(wlocale.obj) : error LNK2001: symbole externe non résolu __CrtDbgReport
+libcpmtd.lib(_tolower.obj) : error LNK2019: symbole externe non résolu __calloc_dbg référencé dans la fonction __Getctype
+libcpmtd.lib(locale.obj) : error LNK2001: symbole externe non résolu __calloc_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: symbole externe non résolu __calloc_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: symbole externe non résolu __calloc_dbg
+libcpmtd.lib(_tolower.obj) : error LNK2019: symbole externe non résolu __wcsdup_dbg référencé dans la fonction __Getctype
+libcpmtd.lib(xstrcoll.obj) : error LNK2001: symbole externe non résolu __wcsdup_dbg
+libcpmtd.lib(locale.obj) : error LNK2019: symbole externe non résolu __realloc_dbg référencé dans la fonction "private: static void __cdecl std::locale::_Locimp::_Locimp_Addfac(class std::locale::_Locimp *,class std::locale::facet *,unsigned int)" (?_Locimp_Addfac@_Locimp@locale@std@@CAXPAV123@PAVfacet@23@I@Z)
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2019: symbole externe non résolu __CrtDbgReportW référencé dans la fonction __freea_crt
+libcpmtd.lib(xmbtowc.obj) : error LNK2001: symbole externe non résolu __CrtDbgReportW
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: symbole externe non résolu __CrtDbgReportW
+C:\Users\paulg\Desktop\Cheats\Injector\Injector\Debug\Injector.exe : fatal error LNK1120: 7 externes non résolus

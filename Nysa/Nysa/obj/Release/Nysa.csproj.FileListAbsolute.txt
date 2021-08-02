@@ -1,0 +1,13 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Release\Nysa.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Release\Nysa.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Release\Nysa.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Release\Newtonsoft.Json.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\bin\Release\Newtonsoft.Json.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.Nysa.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.csproj.CopyComplete
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Nysa\Nysa\obj\Release\Nysa.pdb

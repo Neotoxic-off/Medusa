@@ -1,0 +1,16 @@
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\R-Unlocker.exe.config
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\R-Unlocker.exe
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\R-Unlocker.pdb
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\BCMakeCert.dll
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\CertMaker.dll
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\FiddlerCore4.dll
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\WebSurge.unlocker.resources
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\Duality.Properties.Resources.resources
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\R-Unlocker.csproj.GenerateResource.cache
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\R-Unlocker.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\R-Unlocker.csproj.CopyComplete
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\R-Unlocker.exe
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\R-Unlocker.pdb
+C:\Users\paulg\Desktop\Cheats\R-Unlocker\obj\Debug\R-Unlocker.csprojAssemblyReference.cache

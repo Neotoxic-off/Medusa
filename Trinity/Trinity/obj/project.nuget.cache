@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "a1Vaq82wb+XgW/yC5y9EZBz0klLRDK49CITxuYM6n86vp1oT/T3Q6pMXMG+eTS9t0AsT1S4Cjxk1fWXhyN8MaQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\paulg\\Desktop\\Cheats\\DEAD BY DAYLIGHT\\Trinity\\Trinity\\Trinity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\paulg\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\paulg\\.nuget\\packages\\obfuscar\\2.2.29\\obfuscar.2.2.29.nupkg.sha512",
+    "C:\\Users\\paulg\\.nuget\\packages\\preemptive.protection.checks.attributes\\2.0.0\\preemptive.protection.checks.attributes.2.0.0.nupkg.sha512",
+    "C:\\Users\\paulg\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
+    "C:\\Users\\paulg\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\paulg\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\paulg\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\paulg\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

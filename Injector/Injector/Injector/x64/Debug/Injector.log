@@ -1,0 +1,3 @@
+﻿  Source2.cpp
+C:\Users\paulg\Desktop\Cheats\Injector\Injector\Injector\Source2.cpp(13,26): error C2440: '=' : impossible de convertir de 'char [260]' en 'LPWSTR'
+C:\Users\paulg\Desktop\Cheats\Injector\Injector\Injector\Source2.cpp(13,18): message : Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction

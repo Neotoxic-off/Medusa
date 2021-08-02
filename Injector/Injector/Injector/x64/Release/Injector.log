@@ -1,0 +1,7 @@
+﻿  Source2.cpp
+  Génération de code en cours
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\paulg\Desktop\Cheats\Injector\Injector\Injector\Source2.cpp(18): warning C4715: 'chooseDLL' : les chemins de contrôle ne retournent pas tous une valeur
+  All 80 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Fin de la génération du code
+  Injector.vcxproj -> C:\Users\paulg\Desktop\Cheats\Injector\Injector\x64\Release\Injector.exe
