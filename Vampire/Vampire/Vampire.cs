@@ -226,7 +226,10 @@ namespace Vampire
 
         private void secret_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (secret.Checked == true)
+            {
+                boxer("Use it only if you don't have already purchased any perk on\nthe Shrine of secrets and use it only 1 time and wait Shrine reset", "Shrine of secrets", MessageBoxIcon.Information);
+            }
         }
     }
 }
