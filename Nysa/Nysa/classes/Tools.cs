@@ -12,7 +12,6 @@ namespace Nysa.classes
         public class Rootobject
         {
             public string version { get; set; }
-            public bool pure { get; set; }
             public Color color { get; set; }
             public Tool[] tools { get; set; }
         }

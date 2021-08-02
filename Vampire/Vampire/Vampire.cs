@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -121,8 +122,7 @@ namespace Vampire
                 {
                     if (item.currency == "Bloodpoints")
                     {
-                        allbloodpoint.Text = $"{item.balance.ToString()}";
-                        allbloodpoint.Refresh();
+                        update_status($"{item.balance.ToString()}").Wait();
                         if (item.balance == 1000000)
                             return (1);
                     }
@@ -155,11 +155,33 @@ namespace Vampire
                 }
                 else
                 {
-                    button.ForeColor = Color.White;
+                    button.ForeColor = Color.DimGray;
                     button.BackColor = Color.Transparent;
                     button.Enabled = true;
                 }
             }));
+
+            return (Task.CompletedTask);
+        }
+
+        private Task update_status(string value)
+        {
+            allbloodpoint.Text = value;
+
+            if (value == "ready")
+                allbloodpoint.ForeColor = Color.LimeGreen;
+            else if (value == "outdated")
+                allbloodpoint.ForeColor = Color.Orange;
+            else if (value == "downloading")
+                allbloodpoint.ForeColor = Color.Cyan;
+            else if (value == "downloaded")
+                allbloodpoint.ForeColor = Color.LimeGreen;
+            else if (value == "error")
+                allbloodpoint.ForeColor = Color.Red;
+            else if (value == "lastest")
+                allbloodpoint.ForeColor = Color.Purple;
+            else
+                allbloodpoint.ForeColor = Color.Purple;
 
             return (Task.CompletedTask);
         }
@@ -230,6 +252,20 @@ namespace Vampire
             {
                 boxer("Use it only if you don't have already purchased any perk on\nthe Shrine of secrets and use it only 1 time and wait Shrine reset", "Shrine of secrets", MessageBoxIcon.Information);
             }
+        }
+
+        private void discord_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Process.Start("https://discord.gg/Y7YagcPXh8");
+            Cursor = Cursors.Default;
+        }
+
+        private void coffee_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            MessageBox.Show("Paypal: neotoxic.off@gmail.com\n\nHave a nice day", "Buy me a coffee", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Cursor = Cursors.Default;
         }
     }
 }

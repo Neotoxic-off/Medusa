@@ -63,7 +63,7 @@ namespace Nysa
             // 
             // border
             // 
-            this.border.BackColor = System.Drawing.Color.Black;
+            this.border.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
             this.border.Controls.Add(this.about);
             this.border.Controls.Add(this.label2);
             this.border.Controls.Add(this.version);
@@ -83,7 +83,7 @@ namespace Nysa
             this.about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("about.BackgroundImage")));
             this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.about.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.about.FlatAppearance.BorderSize = 0;
             this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.about.Location = new System.Drawing.Point(542, 3);
@@ -116,7 +116,7 @@ namespace Nysa
             this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimize.BackgroundImage")));
             this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.minimize.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.minimize.FlatAppearance.BorderSize = 0;
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.minimize.Location = new System.Drawing.Point(603, 3);
@@ -131,7 +131,7 @@ namespace Nysa
             this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.exit.FlatAppearance.BorderSize = 0;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.exit.Location = new System.Drawing.Point(633, 3);
@@ -166,7 +166,7 @@ namespace Nysa
             // download
             // 
             this.download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.download.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.download.FlatAppearance.BorderSize = 0;
             this.download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.download.Location = new System.Drawing.Point(367, 13);
             this.download.Name = "download";
@@ -179,7 +179,7 @@ namespace Nysa
             // uncheck
             // 
             this.uncheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.uncheck.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.uncheck.FlatAppearance.BorderSize = 0;
             this.uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uncheck.Location = new System.Drawing.Point(87, 13);
             this.uncheck.Name = "uncheck";
@@ -192,7 +192,7 @@ namespace Nysa
             // check
             // 
             this.check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.check.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.check.FlatAppearance.BorderSize = 0;
             this.check.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.check.Location = new System.Drawing.Point(6, 13);
             this.check.Name = "check";
@@ -216,7 +216,7 @@ namespace Nysa
             // check_update
             // 
             this.check_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.check_update.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.check_update.FlatAppearance.BorderSize = 0;
             this.check_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.check_update.Location = new System.Drawing.Point(101, 19);
             this.check_update.Name = "check_update";
@@ -229,7 +229,7 @@ namespace Nysa
             // discord
             // 
             this.discord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.discord.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.discord.FlatAppearance.BorderSize = 0;
             this.discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.discord.Location = new System.Drawing.Point(6, 19);
             this.discord.Name = "discord";

@@ -229,7 +229,7 @@ namespace Nysa
                 }
                 else
                 {
-                    update("Version: lastest").Wait();
+                    update("version: lastest").Wait();
                     update_status("ready").Wait();
                 }
             }
