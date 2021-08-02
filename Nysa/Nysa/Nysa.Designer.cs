@@ -80,15 +80,17 @@ namespace Nysa
             // 
             // about
             // 
-            this.about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.about.BackColor = System.Drawing.Color.Transparent;
             this.about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("about.BackgroundImage")));
             this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.about.FlatAppearance.BorderSize = 0;
+            this.about.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.about.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.about.Location = new System.Drawing.Point(542, 3);
+            this.about.Location = new System.Drawing.Point(552, 7);
             this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(24, 24);
+            this.about.Size = new System.Drawing.Size(16, 16);
             this.about.TabIndex = 9;
             this.about.UseVisualStyleBackColor = false;
             this.about.Click += new System.EventHandler(this.about_Click);
@@ -113,30 +115,34 @@ namespace Nysa
             // 
             // minimize
             // 
-            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.minimize.BackColor = System.Drawing.Color.Transparent;
             this.minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimize.BackgroundImage")));
             this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.minimize.FlatAppearance.BorderSize = 0;
+            this.minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.minimize.Location = new System.Drawing.Point(603, 3);
+            this.minimize.Location = new System.Drawing.Point(603, 7);
             this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(24, 24);
+            this.minimize.Size = new System.Drawing.Size(16, 16);
             this.minimize.TabIndex = 1;
             this.minimize.UseVisualStyleBackColor = false;
             this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // exit
             // 
-            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.exit.BackColor = System.Drawing.Color.Transparent;
             this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exit.FlatAppearance.BorderSize = 0;
+            this.exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.exit.Location = new System.Drawing.Point(633, 3);
+            this.exit.Location = new System.Drawing.Point(633, 7);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(24, 24);
+            this.exit.Size = new System.Drawing.Size(16, 16);
             this.exit.TabIndex = 0;
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
@@ -274,6 +280,7 @@ namespace Nysa
             // 
             this.logs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
             this.logs.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.logs.Enabled = false;
             this.logs.ForeColor = System.Drawing.Color.DarkGray;
             this.logs.Location = new System.Drawing.Point(6, 19);
             this.logs.Name = "logs";
