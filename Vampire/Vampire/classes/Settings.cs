@@ -10,10 +10,10 @@ namespace Vampire.classes
     {
         public class Rootobject
         {
-            public List[] list { get; set; }
+            public List<data> list { get; set; }
         }
 
-        public class List
+        public class data
         {
             public int balance { get; set; }
             public string currency { get; set; }

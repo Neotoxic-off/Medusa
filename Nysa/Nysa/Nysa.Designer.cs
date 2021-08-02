@@ -31,6 +31,7 @@ namespace Nysa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nysa));
             this.border = new System.Windows.Forms.Panel();
+            this.about = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.version = new System.Windows.Forms.Label();
             this.minimize = new System.Windows.Forms.Button();
@@ -41,17 +42,16 @@ namespace Nysa
             this.uncheck = new System.Windows.Forms.Button();
             this.check = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.check_update = new System.Windows.Forms.Button();
             this.discord = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.logs = new System.Windows.Forms.RichTextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.check_update = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.about = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.border.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -78,6 +78,21 @@ namespace Nysa
             this.border.MouseMove += new System.Windows.Forms.MouseEventHandler(this.border_MouseMove);
             this.border.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
             // 
+            // about
+            // 
+            this.about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("about.BackgroundImage")));
+            this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.about.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.about.Location = new System.Drawing.Point(542, 3);
+            this.about.Name = "about";
+            this.about.Size = new System.Drawing.Size(24, 24);
+            this.about.TabIndex = 9;
+            this.about.UseVisualStyleBackColor = false;
+            this.about.Click += new System.EventHandler(this.about_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -101,6 +116,8 @@ namespace Nysa
             this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimize.BackgroundImage")));
             this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.minimize.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.minimize.Location = new System.Drawing.Point(603, 3);
             this.minimize.Name = "minimize";
@@ -114,6 +131,8 @@ namespace Nysa
             this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.exit.Location = new System.Drawing.Point(633, 3);
             this.exit.Name = "exit";
@@ -147,6 +166,8 @@ namespace Nysa
             // download
             // 
             this.download.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.download.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.download.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.download.Location = new System.Drawing.Point(367, 13);
             this.download.Name = "download";
             this.download.Size = new System.Drawing.Size(75, 23);
@@ -158,6 +179,8 @@ namespace Nysa
             // uncheck
             // 
             this.uncheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.uncheck.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.uncheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.uncheck.Location = new System.Drawing.Point(87, 13);
             this.uncheck.Name = "uncheck";
             this.uncheck.Size = new System.Drawing.Size(75, 23);
@@ -169,6 +192,8 @@ namespace Nysa
             // check
             // 
             this.check.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.check.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.check.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.check.Location = new System.Drawing.Point(6, 13);
             this.check.Name = "check";
             this.check.Size = new System.Drawing.Size(75, 23);
@@ -188,9 +213,24 @@ namespace Nysa
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
+            // check_update
+            // 
+            this.check_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.check_update.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.check_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.check_update.Location = new System.Drawing.Point(101, 19);
+            this.check_update.Name = "check_update";
+            this.check_update.Size = new System.Drawing.Size(75, 23);
+            this.check_update.TabIndex = 6;
+            this.check_update.Text = "Update";
+            this.check_update.UseVisualStyleBackColor = false;
+            this.check_update.Click += new System.EventHandler(this.check_update_Click);
+            // 
             // discord
             // 
             this.discord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.discord.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.discord.Location = new System.Drawing.Point(6, 19);
             this.discord.Name = "discord";
             this.discord.Size = new System.Drawing.Size(75, 23);
@@ -253,17 +293,6 @@ namespace Nysa
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             // 
-            // check_update
-            // 
-            this.check_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.check_update.Location = new System.Drawing.Point(101, 19);
-            this.check_update.Name = "check_update";
-            this.check_update.Size = new System.Drawing.Size(75, 23);
-            this.check_update.TabIndex = 6;
-            this.check_update.Text = "Update";
-            this.check_update.UseVisualStyleBackColor = false;
-            this.check_update.Click += new System.EventHandler(this.check_update_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -294,19 +323,6 @@ namespace Nysa
             this.groupBox5.Size = new System.Drawing.Size(182, 43);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
-            // 
-            // about
-            // 
-            this.about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("about.BackgroundImage")));
-            this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.about.Location = new System.Drawing.Point(542, 3);
-            this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(24, 24);
-            this.about.TabIndex = 9;
-            this.about.UseVisualStyleBackColor = false;
-            this.about.Click += new System.EventHandler(this.about_Click);
             // 
             // label4
             // 

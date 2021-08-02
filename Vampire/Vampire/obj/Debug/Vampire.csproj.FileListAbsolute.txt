@@ -1,0 +1,15 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\bin\Debug\Vampire.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\bin\Debug\Vampire.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\bin\Debug\Vampire.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\bin\Debug\RestSharp.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\bin\Debug\RestSharp.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.Vampire.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.csproj.CopyComplete
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Vampire\Vampire\obj\Debug\Vampire.pdb
