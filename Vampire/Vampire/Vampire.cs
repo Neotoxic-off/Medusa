@@ -230,11 +230,7 @@ namespace Vampire
                 }
                 update(inject).Wait();
             }
-            else
-            {
-                boxer("Copy your bhvr cookie", "No cookie found", MessageBoxIcon.Error);
-                return (Task.CompletedTask);
-            }
+
             return (Task.CompletedTask);
 
         }

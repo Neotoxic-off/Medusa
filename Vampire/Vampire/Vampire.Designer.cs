@@ -51,7 +51,7 @@ namespace Vampire
             // 
             // border
             // 
-            this.border.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(10)))), ((int)(((byte)(23)))));
+            this.border.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
             this.border.Controls.Add(this.about);
             this.border.Controls.Add(this.label2);
             this.border.Controls.Add(this.version);
@@ -68,12 +68,13 @@ namespace Vampire
             // 
             // about
             // 
-            this.about.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.about.BackColor = System.Drawing.Color.Transparent;
             this.about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("about.BackgroundImage")));
             this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.about.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.about.FlatAppearance.BorderSize = 0;
             this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.about.ForeColor = System.Drawing.Color.Transparent;
             this.about.Location = new System.Drawing.Point(280, 3);
             this.about.Name = "about";
             this.about.Size = new System.Drawing.Size(24, 24);
@@ -103,12 +104,13 @@ namespace Vampire
             // 
             // minimize
             // 
-            this.minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.minimize.BackColor = System.Drawing.Color.Transparent;
             this.minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimize.BackgroundImage")));
             this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.minimize.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.minimize.FlatAppearance.BorderSize = 0;
             this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.minimize.ForeColor = System.Drawing.Color.Transparent;
             this.minimize.Location = new System.Drawing.Point(337, 3);
             this.minimize.Name = "minimize";
             this.minimize.Size = new System.Drawing.Size(24, 24);
@@ -118,12 +120,13 @@ namespace Vampire
             // 
             // exit
             // 
-            this.exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.exit.BackColor = System.Drawing.Color.Transparent;
             this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.exit.FlatAppearance.BorderSize = 0;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.exit.ForeColor = System.Drawing.Color.Transparent;
             this.exit.Location = new System.Drawing.Point(367, 3);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(24, 24);
@@ -208,6 +211,7 @@ namespace Vampire
             // 
             this.coffee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.coffee.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.coffee.FlatAppearance.BorderSize = 0;
             this.coffee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.coffee.Location = new System.Drawing.Point(101, 19);
             this.coffee.Name = "coffee";
@@ -221,6 +225,7 @@ namespace Vampire
             // 
             this.discord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.discord.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.discord.FlatAppearance.BorderSize = 0;
             this.discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.discord.Location = new System.Drawing.Point(6, 19);
             this.discord.Name = "discord";
