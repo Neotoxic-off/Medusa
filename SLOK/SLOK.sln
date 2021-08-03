@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slock", "SLOK\Slock.csproj", "{2B558004-B353-4A35-A00A-9258DC8E9CAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B558004-B353-4A35-A00A-9258DC8E9CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B558004-B353-4A35-A00A-9258DC8E9CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B558004-B353-4A35-A00A-9258DC8E9CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B558004-B353-4A35-A00A-9258DC8E9CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFD3A317-0C9C-4BE8-AF42-1ACFFD5A6DDD}
+	EndGlobalSection
+EndGlobal

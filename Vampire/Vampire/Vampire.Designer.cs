@@ -60,7 +60,7 @@ namespace Vampire
             this.border.Dock = System.Windows.Forms.DockStyle.Top;
             this.border.Location = new System.Drawing.Point(0, 0);
             this.border.Name = "border";
-            this.border.Size = new System.Drawing.Size(395, 30);
+            this.border.Size = new System.Drawing.Size(400, 30);
             this.border.TabIndex = 1;
             this.border.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.border.MouseMove += new System.Windows.Forms.MouseEventHandler(this.border_MouseMove);
@@ -143,7 +143,7 @@ namespace Vampire
             // secret
             // 
             this.secret.AutoSize = true;
-            this.secret.Location = new System.Drawing.Point(145, 101);
+            this.secret.Location = new System.Drawing.Point(143, 98);
             this.secret.Name = "secret";
             this.secret.Size = new System.Drawing.Size(107, 17);
             this.secret.TabIndex = 2;
@@ -154,7 +154,7 @@ namespace Vampire
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(311, 45);
+            this.label1.Location = new System.Drawing.Point(316, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 3;
@@ -163,7 +163,7 @@ namespace Vampire
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(356, 45);
+            this.label3.Location = new System.Drawing.Point(361, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 4;
@@ -175,7 +175,7 @@ namespace Vampire
             this.inject.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.inject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inject.ForeColor = System.Drawing.Color.DimGray;
-            this.inject.Location = new System.Drawing.Point(131, 72);
+            this.inject.Location = new System.Drawing.Point(129, 69);
             this.inject.Name = "inject";
             this.inject.Size = new System.Drawing.Size(125, 23);
             this.inject.TabIndex = 5;
@@ -187,7 +187,7 @@ namespace Vampire
             // 
             this.allbloodpoint.AutoSize = true;
             this.allbloodpoint.ForeColor = System.Drawing.Color.Orange;
-            this.allbloodpoint.Location = new System.Drawing.Point(199, 143);
+            this.allbloodpoint.Location = new System.Drawing.Point(197, 140);
             this.allbloodpoint.Name = "allbloodpoint";
             this.allbloodpoint.Size = new System.Drawing.Size(57, 13);
             this.allbloodpoint.TabIndex = 6;
@@ -196,7 +196,7 @@ namespace Vampire
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(128, 143);
+            this.label4.Location = new System.Drawing.Point(126, 140);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 7;
@@ -207,7 +207,7 @@ namespace Vampire
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.coffee);
             this.groupBox2.Controls.Add(this.discord);
-            this.groupBox2.Location = new System.Drawing.Point(101, 159);
+            this.groupBox2.Location = new System.Drawing.Point(100, 159);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(182, 54);
             this.groupBox2.TabIndex = 8;
@@ -247,7 +247,7 @@ namespace Vampire
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(395, 225);
+            this.ClientSize = new System.Drawing.Size(400, 225);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.allbloodpoint);

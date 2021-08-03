@@ -1,0 +1,16 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\SLOK.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\SLOK.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\SLOK.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\Newtonsoft.Json.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\Newtonsoft.Json.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\Slock.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\SLOK.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\SLOK.Slock.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\Slock.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\Slock.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\Slock.csproj.CopyComplete
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\SLOK.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\obj\Debug\SLOK.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\FiddlerCore.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\BCMakeCert.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\SLOK\SLOK\bin\Debug\Telerik.NetworkConnections.dll
