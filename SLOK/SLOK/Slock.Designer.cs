@@ -31,6 +31,7 @@ namespace SLOK
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Slock));
             this.border = new System.Windows.Forms.Panel();
+            this.browse = new System.Windows.Forms.Button();
             this.about = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.version = new System.Windows.Forms.Label();
@@ -43,9 +44,11 @@ namespace SLOK
             this.market_path = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.browse = new System.Windows.Forms.Button();
             this.folder_path = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.status = new System.Windows.Forms.Label();
+            this.stop_button = new System.Windows.Forms.Button();
             this.border.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +70,23 @@ namespace SLOK
             this.border.MouseDown += new System.Windows.Forms.MouseEventHandler(this.border_MouseDown);
             this.border.MouseMove += new System.Windows.Forms.MouseEventHandler(this.border_MouseMove);
             this.border.MouseUp += new System.Windows.Forms.MouseEventHandler(this.border_MouseUp);
+            // 
+            // browse
+            // 
+            this.browse.BackColor = System.Drawing.Color.Transparent;
+            this.browse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("browse.BackgroundImage")));
+            this.browse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.browse.FlatAppearance.BorderSize = 0;
+            this.browse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.browse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.browse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.browse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.browse.Location = new System.Drawing.Point(317, 6);
+            this.browse.Name = "browse";
+            this.browse.Size = new System.Drawing.Size(16, 16);
+            this.browse.TabIndex = 10;
+            this.browse.UseVisualStyleBackColor = false;
+            this.browse.Click += new System.EventHandler(this.browse_Click);
             // 
             // about
             // 
@@ -142,7 +162,7 @@ namespace SLOK
             this.run.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.run.FlatAppearance.BorderSize = 0;
             this.run.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.run.Location = new System.Drawing.Point(162, 105);
+            this.run.Location = new System.Drawing.Point(161, 83);
             this.run.Name = "run";
             this.run.Size = new System.Drawing.Size(75, 23);
             this.run.TabIndex = 10;
@@ -217,23 +237,6 @@ namespace SLOK
             this.label4.TabIndex = 16;
             this.label4.Text = "Author:";
             // 
-            // browse
-            // 
-            this.browse.BackColor = System.Drawing.Color.Transparent;
-            this.browse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("browse.BackgroundImage")));
-            this.browse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.browse.FlatAppearance.BorderSize = 0;
-            this.browse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.browse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.browse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.browse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.browse.Location = new System.Drawing.Point(317, 6);
-            this.browse.Name = "browse";
-            this.browse.Size = new System.Drawing.Size(16, 16);
-            this.browse.TabIndex = 10;
-            this.browse.UseVisualStyleBackColor = false;
-            this.browse.Click += new System.EventHandler(this.browse_Click);
-            // 
             // folder_path
             // 
             this.folder_path.DefaultExt = "*.json";
@@ -247,11 +250,48 @@ namespace SLOK
             this.label1.TabIndex = 18;
             this.label1.Text = "Market:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 58);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Status:";
+            // 
+            // status
+            // 
+            this.status.AutoSize = true;
+            this.status.ForeColor = System.Drawing.Color.Orange;
+            this.status.Location = new System.Drawing.Point(60, 58);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(45, 13);
+            this.status.TabIndex = 19;
+            this.status.Text = "stopped";
+            // 
+            // stop_button
+            // 
+            this.stop_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.stop_button.Enabled = false;
+            this.stop_button.FlatAppearance.BorderSize = 0;
+            this.stop_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stop_button.Location = new System.Drawing.Point(161, 112);
+            this.stop_button.Name = "stop_button";
+            this.stop_button.Size = new System.Drawing.Size(75, 23);
+            this.stop_button.TabIndex = 21;
+            this.stop_button.Text = "Stop";
+            this.stop_button.UseVisualStyleBackColor = false;
+            this.stop_button.Click += new System.EventHandler(this.stop_button_Click);
+            // 
             // Slock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(400, 209);
+            this.Controls.Add(this.stop_button);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.run);
             this.Controls.Add(this.label3);
@@ -259,11 +299,12 @@ namespace SLOK
             this.Controls.Add(this.market_path);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.border);
+            this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Slock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Slock";
             this.Load += new System.EventHandler(this.Slock_Load);
             this.border.ResumeLayout(false);
             this.border.PerformLayout();
@@ -291,6 +332,9 @@ namespace SLOK
         private System.Windows.Forms.Button browse;
         private System.Windows.Forms.OpenFileDialog folder_path;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label status;
+        private System.Windows.Forms.Button stop_button;
     }
 }
 

@@ -118,6 +118,8 @@ namespace SLOK
         private void exit_Click(object sender, EventArgs e)
         {
             Stop();
+            status.Text = "stopped";
+            status.ForeColor = Color.Orange;
             UninstallCertificate();
             this.Close();
         }
@@ -248,12 +250,25 @@ namespace SLOK
             {
                 InstallCertificate();
                 Start();
+                status.Text = "running";
+                status.ForeColor = Color.LimeGreen;
+                stop_button.Enabled = true;
+                run.Enabled = false;
             }
             else
             {
                 MessageBox.Show($"Market path not found: '{settings.path}'", "Invalid path", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Cursor = Cursors.Default;
+        }
+
+        private void stop_button_Click(object sender, EventArgs e)
+        {
+            Stop();
+            status.Text = "stopped";
+            status.ForeColor = Color.Orange;
+            run.Enabled = true;
+            stop_button.Enabled = false;
         }
     }
 }
