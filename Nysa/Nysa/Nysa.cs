@@ -28,6 +28,7 @@ namespace Nysa
 
         private void Nysa_Load(object sender, EventArgs e)
         {
+            panel1.BackColor = Color.FromArgb(10, Color.White);
             load_settings().Wait();
             autoupdate().Wait();
         }

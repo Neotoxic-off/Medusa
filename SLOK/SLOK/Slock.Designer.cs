@@ -38,7 +38,6 @@ namespace SLOK
             this.minimize = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.run = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.coffee = new System.Windows.Forms.Button();
             this.discord = new System.Windows.Forms.Button();
             this.market_path = new System.Windows.Forms.Label();
@@ -48,9 +47,9 @@ namespace SLOK
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
-            this.stop_button = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.modified = new System.Windows.Forms.Label();
             this.border.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // border
@@ -162,7 +161,7 @@ namespace SLOK
             this.run.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.run.FlatAppearance.BorderSize = 0;
             this.run.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.run.Location = new System.Drawing.Point(161, 83);
+            this.run.Location = new System.Drawing.Point(162, 113);
             this.run.Name = "run";
             this.run.Size = new System.Drawing.Size(75, 23);
             this.run.TabIndex = 10;
@@ -170,24 +169,14 @@ namespace SLOK
             this.run.UseVisualStyleBackColor = false;
             this.run.Click += new System.EventHandler(this.run_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.coffee);
-            this.groupBox2.Controls.Add(this.discord);
-            this.groupBox2.Location = new System.Drawing.Point(100, 143);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 54);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            // 
             // coffee
             // 
             this.coffee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
             this.coffee.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.coffee.FlatAppearance.BorderSize = 0;
             this.coffee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coffee.Location = new System.Drawing.Point(119, 19);
+            this.coffee.ForeColor = System.Drawing.Color.DimGray;
+            this.coffee.Location = new System.Drawing.Point(204, 174);
             this.coffee.Name = "coffee";
             this.coffee.Size = new System.Drawing.Size(75, 23);
             this.coffee.TabIndex = 6;
@@ -201,7 +190,8 @@ namespace SLOK
             this.discord.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.discord.FlatAppearance.BorderSize = 0;
             this.discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.discord.Location = new System.Drawing.Point(6, 19);
+            this.discord.ForeColor = System.Drawing.Color.DimGray;
+            this.discord.Location = new System.Drawing.Point(123, 174);
             this.discord.Name = "discord";
             this.discord.Size = new System.Drawing.Size(75, 23);
             this.discord.TabIndex = 7;
@@ -213,7 +203,7 @@ namespace SLOK
             // 
             this.market_path.AutoSize = true;
             this.market_path.ForeColor = System.Drawing.Color.Orange;
-            this.market_path.Location = new System.Drawing.Point(59, 45);
+            this.market_path.Location = new System.Drawing.Point(74, 58);
             this.market_path.Name = "market_path";
             this.market_path.Size = new System.Drawing.Size(57, 13);
             this.market_path.TabIndex = 15;
@@ -244,7 +234,7 @@ namespace SLOK
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 45);
+            this.label1.Location = new System.Drawing.Point(12, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 18;
@@ -253,7 +243,7 @@ namespace SLOK
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 58);
+            this.label5.Location = new System.Drawing.Point(12, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 20;
@@ -263,25 +253,30 @@ namespace SLOK
             // 
             this.status.AutoSize = true;
             this.status.ForeColor = System.Drawing.Color.Orange;
-            this.status.Location = new System.Drawing.Point(60, 58);
+            this.status.Location = new System.Drawing.Point(74, 71);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(45, 13);
             this.status.TabIndex = 19;
             this.status.Text = "stopped";
             // 
-            // stop_button
+            // label6
             // 
-            this.stop_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.stop_button.Enabled = false;
-            this.stop_button.FlatAppearance.BorderSize = 0;
-            this.stop_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.stop_button.Location = new System.Drawing.Point(161, 112);
-            this.stop_button.Name = "stop_button";
-            this.stop_button.Size = new System.Drawing.Size(75, 23);
-            this.stop_button.TabIndex = 21;
-            this.stop_button.Text = "Stop";
-            this.stop_button.UseVisualStyleBackColor = false;
-            this.stop_button.Click += new System.EventHandler(this.stop_button_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Bypassed:";
+            // 
+            // modified
+            // 
+            this.modified.AutoSize = true;
+            this.modified.ForeColor = System.Drawing.Color.Red;
+            this.modified.Location = new System.Drawing.Point(74, 45);
+            this.modified.Name = "modified";
+            this.modified.Size = new System.Drawing.Size(29, 13);
+            this.modified.TabIndex = 22;
+            this.modified.Text = "false";
             // 
             // Slock
             // 
@@ -289,7 +284,10 @@ namespace SLOK
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(400, 209);
-            this.Controls.Add(this.stop_button);
+            this.Controls.Add(this.coffee);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.discord);
+            this.Controls.Add(this.modified);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.status);
             this.Controls.Add(this.label1);
@@ -297,7 +295,6 @@ namespace SLOK
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.market_path);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.border);
             this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -308,7 +305,6 @@ namespace SLOK
             this.Load += new System.EventHandler(this.Slock_Load);
             this.border.ResumeLayout(false);
             this.border.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,7 +319,6 @@ namespace SLOK
         private System.Windows.Forms.Button minimize;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button run;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button coffee;
         private System.Windows.Forms.Button discord;
         private System.Windows.Forms.Label market_path;
@@ -334,7 +329,8 @@ namespace SLOK
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label status;
-        private System.Windows.Forms.Button stop_button;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label modified;
     }
 }
 

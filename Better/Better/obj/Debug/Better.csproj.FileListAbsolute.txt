@@ -1,0 +1,13 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\bin\Debug\Better.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\bin\Debug\Better.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\bin\Debug\Better.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.Better.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\bin\Debug\RestSharp.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\bin\Debug\RestSharp.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Better\Better\obj\Debug\Better.csproj.CopyComplete

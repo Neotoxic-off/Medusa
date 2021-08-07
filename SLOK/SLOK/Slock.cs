@@ -23,6 +23,7 @@ namespace SLOK
         classes.Settings.Rootobject settings = null;
 
         string data = null;
+        List<string> dump_content = new List<string>();
 
         public Slock()
         {
@@ -110,9 +111,9 @@ namespace SLOK
 
         private void about_Click(object sender, EventArgs e)
         {
-            string data = "Hi i'm Neo, all my cheats are free, so if you bought this one or another one made by me, you got scammed, please report the scammer on discord, and download all my tools for free on the discord, thanks\n\nHave a nice day";
+            string about_data = "Hi i'm Neo, all my cheats are free, so if you bought this one or another one made by me, you got scammed, please report the scammer on discord, and download all my tools for free on the discord, thanks\n\nHave a nice day";
 
-            MessageBox.Show(data, "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(about_data, "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -205,23 +206,37 @@ namespace SLOK
             return (true);
         }
 
-        private void FiddlerApplication_AfterSessionComplete(Session sess)
+        private void Bypasser(Session sess)
         {
-            string body = null;
-
-            if (sess != null)
+            if (sess != null && sess.oRequest != null && sess.oRequest.headers != null)
             {
-                if (sess.fullUrl.Contains(settings.url))
+                if (sess.fullUrl.Contains("bhvrdbd") && sess.fullUrl.Contains(settings.url))
                 {
-                    this.Invoke(new Action(delegate {
-                        body = sess.GetRequestBodyAsString();
-                        if (body.Length > 0)
+                    sess.bBufferResponse = true;
+
+                    sess.utilDecodeResponse();
+                    sess.utilSetResponseBody(data);
+                    BeginInvoke(new Action(delegate {
+                        if (sess.GetResponseBodyAsString() == data)
                         {
-                            sess.utilSetRequestBody(data);
+                            modified.Text = "true";
+                            modified.ForeColor = Color.LimeGreen;
+                        }
+                        else
+                        {
+                            modified.Text = "red";
+                            modified.ForeColor = Color.Red;
                         }
                     }));
                 }
             }
+
+            return;
+        }
+
+        private void FiddlerApplication_BeforeRequest(Session oSession)
+        {
+            oSession.bBufferResponse = true;
         }
 
         public void Start()
@@ -232,12 +247,15 @@ namespace SLOK
                 .Build();
             FiddlerApplication.Startup(startupSettings);
 
-            FiddlerApplication.AfterSessionComplete += FiddlerApplication_AfterSessionComplete;
+            FiddlerApplication.BeforeRequest += FiddlerApplication_BeforeRequest;
+
+            FiddlerApplication.BeforeResponse += Bypasser;
         }
 
         public void Stop()
         {
-            FiddlerApplication.AfterSessionComplete -= FiddlerApplication_AfterSessionComplete;
+            FiddlerApplication.BeforeRequest -= FiddlerApplication_BeforeRequest;
+            FiddlerApplication.BeforeResponse -= Bypasser;
 
             if (FiddlerApplication.IsStarted())
                 FiddlerApplication.Shutdown();
@@ -252,7 +270,6 @@ namespace SLOK
                 Start();
                 status.Text = "running";
                 status.ForeColor = Color.LimeGreen;
-                stop_button.Enabled = true;
                 run.Enabled = false;
             }
             else
@@ -260,15 +277,6 @@ namespace SLOK
                 MessageBox.Show($"Market path not found: '{settings.path}'", "Invalid path", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Cursor = Cursors.Default;
-        }
-
-        private void stop_button_Click(object sender, EventArgs e)
-        {
-            Stop();
-            status.Text = "stopped";
-            status.ForeColor = Color.Orange;
-            run.Enabled = true;
-            stop_button.Enabled = false;
         }
     }
 }

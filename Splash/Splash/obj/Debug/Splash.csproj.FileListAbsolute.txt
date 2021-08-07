@@ -1,0 +1,10 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\bin\Debug\Splash.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\bin\Debug\Splash.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\bin\Debug\Splash.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\obj\Debug\Splash.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\obj\Debug\Splash.Splash.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\obj\Debug\Splash.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\obj\Debug\Splash.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\obj\Debug\Splash.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\obj\Debug\Splash.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Splash\Splash\obj\Debug\Splash.pdb
