@@ -194,7 +194,7 @@ namespace Better
             this.logo_rank_survivor.Location = new System.Drawing.Point(114, 81);
             this.logo_rank_survivor.Name = "logo_rank_survivor";
             this.logo_rank_survivor.Size = new System.Drawing.Size(64, 76);
-            this.logo_rank_survivor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.logo_rank_survivor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo_rank_survivor.TabIndex = 24;
             this.logo_rank_survivor.TabStop = false;
             // 
@@ -204,7 +204,7 @@ namespace Better
             this.logo_rank_killer.Location = new System.Drawing.Point(209, 81);
             this.logo_rank_killer.Name = "logo_rank_killer";
             this.logo_rank_killer.Size = new System.Drawing.Size(64, 76);
-            this.logo_rank_killer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.logo_rank_killer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logo_rank_killer.TabIndex = 25;
             this.logo_rank_killer.TabStop = false;
             // 

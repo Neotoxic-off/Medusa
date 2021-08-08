@@ -100,13 +100,13 @@ namespace Better
         {
             int value = (int)rank_survivor_wanted.Value;
 
-            if (File.Exists($"{survivor}\\{value}.png") == true)
+            if (File.Exists($"{survivor}\\{value}.gif") == true)
             {
-                logo_rank_survivor.Image = Image.FromFile($"{survivor}\\{value}.png");
+                logo_rank_survivor.Image = Image.FromFile($"{survivor}\\{value}.gif");
             }
             else
             {
-                MessageBox.Show($"icon: {survivor}\\{ value}.png is missing", "Missing icon", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"icon: {survivor}\\{value}.gif is missing", "Missing icon", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
         }
@@ -115,13 +115,13 @@ namespace Better
         {
             int value = (int)rank_killer_wanted.Value;
 
-            if (File.Exists($"{killer}\\{value}.png") == true)
+            if (File.Exists($"{killer}\\{value}.gif") == true)
             {
-                logo_rank_killer.Image = Image.FromFile($"{killer}\\{value}.png");
+                logo_rank_killer.Image = Image.FromFile($"{killer}\\{value}.gif");
             }
             else
             {
-                MessageBox.Show($"icon: {killer}\\{ value}.png is missing", "Missing icon", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"icon: {killer}\\{ value}.gif is missing", "Missing icon", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
         }
