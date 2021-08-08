@@ -1,18 +1,1 @@
-{
-    "version" : "1.1.0",
-    "pure" : true,
-    "color" : "#15161C",
-    "tools" : [
-        {
-            "name" : "R-Unlocker",
-            "link" : "https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/R-Unlocker.rar",
-            "version" : "1.0.0"
-        },
-        {
-            "name" : "Slock",
-            "link" : "https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Slock.rar",
-            "version" : "1.0.0"
-        }
-    ]
-}
-
+{"version":"1.3.0","background":"C:\\Users\\paulg\\Documents\\Code\\DEAD BY DAYLIGHT\\Medusa\\Nysa\\Nysa\\bin\\Debug\\resources\\maid.jpg","color":"21, 22, 28","tools":[{"name":"Slock","link":"https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Slock.rar","version":"1.0.0"},{"name":"Splash","link":"https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Splash.rar","version":"1.0.0"}]}

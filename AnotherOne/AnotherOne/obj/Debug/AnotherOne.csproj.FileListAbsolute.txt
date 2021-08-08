@@ -1,0 +1,10 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\bin\Debug\AnotherOne.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\bin\Debug\AnotherOne.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\bin\Debug\AnotherOne.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\obj\Debug\AnotherOne.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\obj\Debug\AnotherOne.AnotherOne.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\obj\Debug\AnotherOne.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\obj\Debug\AnotherOne.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\obj\Debug\AnotherOne.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\obj\Debug\AnotherOne.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\AnotherOne\AnotherOne\obj\Debug\AnotherOne.pdb
