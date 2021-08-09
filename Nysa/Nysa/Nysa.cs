@@ -22,7 +22,11 @@ namespace Nysa
         private Point offset;
         OpenFileDialog folder_path = new OpenFileDialog();
         private classes.Tools.Rootobject settings_tools = null;
-        string settings_path = "Settings.json";
+
+        static string resources_path = "resources";
+        static string settings_path = $"{resources_path}\\Settings.json";
+        static string download_path = "Downloads";
+        static string logs_path = "Logs";
 
         private List<string> logs = new List<string>();
 
@@ -33,7 +37,7 @@ namespace Nysa
 
         private Task logger(string type, string value)
         {
-            logs.Add($"[{type}] {value}");
+            logs.Add($"{DateTime.Now.ToString("HH:mm:ss")} [{type}] {value}");
 
             return (Task.CompletedTask);
         }
@@ -45,7 +49,7 @@ namespace Nysa
             folder_path.FilterIndex = 2;
             folder_path.Filter = "Images (*.png *.jpg *.jpeg)|*.png;*.jpg;*.jpeg";
 
-            panel.BackColor = Color.FromArgb(75, 255, 255, 255);
+            panel.BackColor = Color.FromArgb(175, 21, 22, 28);
 
             load_settings().Wait();
             autoupdate().Wait();
@@ -108,7 +112,9 @@ namespace Nysa
                     logger("ERROR", "Background path not found").Wait();
                 }
             }
-            
+            logger("LOAD", "Loading blur").Wait();
+            blur.BackColor = settings_tools.blur;
+            logger("DONE", "Blur loaded").Wait();
 
             return (Task.CompletedTask);
         }
@@ -209,7 +215,6 @@ namespace Nysa
             } else
             {
                 MessageBox.Show($"Settings file: '{settings_path}' not found", $"{settings_path}", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
             }
 
             return (Task.CompletedTask);
@@ -217,7 +222,6 @@ namespace Nysa
 
         private void exit_Click(object sender, EventArgs e)
         {
-            logger("EXIT", "Bye, have a nice day").Wait();
             this.Close();
         }
 
@@ -293,7 +297,7 @@ namespace Nysa
         {
             WebClient client = new WebClient();
 
-            client.DownloadFile($"{settings_tools.tools[i].link}", $"{cleanner(settings_tools.tools[i].link)}");
+            client.DownloadFile($"{settings_tools.tools[i].link}", $"{download_path}\\{cleanner(settings_tools.tools[i].link)}");
             
             return (Task.CompletedTask);
         }
@@ -301,18 +305,27 @@ namespace Nysa
         private async void download_Click(object sender, EventArgs e)
         {
             Task downloader = null;
+            string current = null;
 
             Cursor = Cursors.WaitCursor;
+
+            if (Directory.Exists(download_path) == false)
+            {
+                logger("WAIT", $"Creating '{download_path}' directory").Wait();
+                Directory.CreateDirectory(download_path);
+                logger("DONE", "Directory created").Wait();
+            }
 
             if (tools.CheckedItems.Count > 0)
             {
                 update_status("downloading").Wait();
                 for (int i = 0; i < tools.Items.Count; i++)
                 {
-                    logger("WAIT", $"Downloading {cleanner(settings_tools.tools[i].link)}").Wait();
+                    current = cleanner(settings_tools.tools[i].link);
+                    logger("WAIT", $"Downloading {current}").Wait();
                     if (tools.GetItemChecked(i) == true)
                         downloader = await Task.Run(() => download_tool(i));
-                    logger("DONE", $"Downloaded {cleanner(settings_tools.tools[i].link)}").Wait();
+                    logger("DONE", $"Downloaded {current}").Wait();
                 }
                 update_status("downloaded").Wait();
             }
@@ -326,7 +339,9 @@ namespace Nysa
         private void discord_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
+            logger("WAIT", "Launching discord...").Wait();
             Process.Start("https://discord.gg/Y7YagcPXh8");
+            logger("DONE", "Discord launched").Wait();
             Cursor = Cursors.Default;
         }
 
@@ -338,11 +353,11 @@ namespace Nysa
                 status.ForeColor = Color.LimeGreen;
             if (value == "outdated")
                 status.ForeColor = Color.Orange;
-            if (value == "downloading" || value == "extracting")
+            if (value == "downloading" || value == "extracting" || value == "launching" || value == "editing configuration")
                 status.ForeColor = Color.Cyan;
-            if (value == "downloaded" || value == "extracted")
+            if (value == "downloaded" || value == "extracted" || value == "launched" || value == "configuration edited")
                 status.ForeColor = Color.LimeGreen;
-            if (value == "error")
+            if (value == "something went wrong")
                 status.ForeColor = Color.Red;
             if (value == "lastest")
                 status.ForeColor = Color.Purple;
@@ -355,10 +370,19 @@ namespace Nysa
             WebClient client = new WebClient();
             string link = "https://raw.githubusercontent.com/Neotoxic-off/Nysa/main/version";
             string settings = "https://raw.githubusercontent.com/Neotoxic-off/Nysa/main/Settings.json";
-            string output = "version";
+            string output = $"{resources_path}\\version";
             string lastest = null;
 
             Cursor = Cursors.WaitCursor;
+            if (File.Exists(settings_path) == false)
+            {
+                logger("WAIT", "Downloading new settings...").Wait();
+                update_status("downloading").Wait();
+                client.DownloadFile(settings, settings_path);
+                update_status("downloaded").Wait();
+                logger("DONE", "Downloaded new settings").Wait();
+                load_settings().Wait();
+            }
             try
             {
                 logger("LOAD", "Checking version...").Wait();
@@ -384,10 +408,10 @@ namespace Nysa
                     update_status("ready").Wait();
                 }
             }
-            catch
+            catch (Exception e)
             {
-                logger("ERROR", "Error while checking version").Wait();
-                update_status("error").Wait();
+                logger("ERROR", $"Error while checking version:\n{e}").Wait();
+                update_status("something went wrong").Wait();
             }
             Cursor = Cursors.Default;
 
@@ -396,7 +420,9 @@ namespace Nysa
 
         private void check_update_Click(object sender, EventArgs e)
         {
+            logger("WAIT", "Updating...").Wait();
             autoupdate().Wait();
+            logger("DONE", "Updated").Wait();
         }
 
         private void about_Click(object sender, EventArgs e)
@@ -409,8 +435,10 @@ namespace Nysa
         private void browse_Click(object sender, EventArgs e)
         {
             Cursor = Cursors.WaitCursor;
+            logger("WAIT", "Browsing...").Wait();
             get_background().Wait();
             load_settings().Wait();
+            logger("DONE", "Browser closed").Wait();
             Cursor = Cursors.Default;
         }
 
@@ -419,9 +447,11 @@ namespace Nysa
             string date = DateTime.Now.ToString("HH_mm_ss");
 
             Cursor = Cursors.WaitCursor;
+            logger("WAIT", "Extracting logs...").Wait();
             update_status("extracting").Wait();
-            File.AppendAllLines($"logs_{date}.txt", logs);
+            File.AppendAllLines($"{logs_path}\\logs_{date}.txt", logs);
             update_status("extracted").Wait();
+            logger("DONE", "Logs extracted").Wait();
             Cursor = Cursors.Default;
         }
 
@@ -444,8 +474,40 @@ namespace Nysa
             logger("THEME", $"{theme_on}").Wait();
             logger("DONE", "Configuration changed").Wait();
             logger("WAIT", "Updating settings...").Wait();
+            if (Directory.Exists(logs_path) == false)
+            {
+                logger("WAIT", $"Creating '{logs_path}' directory").Wait();
+                Directory.CreateDirectory(logs_path);
+                logger("DONE", "Directory created").Wait();
+            }
             File.WriteAllText(settings_path, JsonConvert.SerializeObject(settings_tools));
             logger("DONE", "Settings updated").Wait();
+            Cursor = Cursors.Default;
+        }
+
+        private void launch_Click(object sender, EventArgs e)
+        {
+            int id = 381210;
+
+            Cursor = Cursors.WaitCursor;
+            logger("WAIT", "Launching Dead By Daylight...").Wait();
+            update_status("launching").Wait();
+            Process.Start($"steam://rungameid/{id}");
+            logger("DONE", "Dead By Daylight launched").Wait();
+            update_status("launched").Wait();
+            Cursor = Cursors.Default;
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            logger("WAIT", "Editing configuration...").Wait();
+            update_status("editing configuration").Wait();
+            form.editor editor = new form.editor(settings_tools, settings_path);
+            editor.ShowDialog();
+            logger("DONE", "Configuration edited").Wait();
+            update_status("configuration edited").Wait();
+            load_settings().Wait();
             Cursor = Cursors.Default;
         }
     }

@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace Nysa.classes
 {
-    class Tools
+    public class Tools
     {
         public class Rootobject
         {
             public string version { get; set; }
             public string background { get; set; }
+            public Color blur { get; set; }
             public bool minimalist { get; set; }
             public Color color { get; set; }
             public Tool[] tools { get; set; }
