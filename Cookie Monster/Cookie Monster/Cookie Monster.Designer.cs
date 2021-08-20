@@ -1,7 +1,7 @@
 ﻿
 namespace Cookie_Monster
 {
-    partial class Form1
+    partial class Cookie_Monster
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -29,7 +29,7 @@ namespace Cookie_Monster
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cookie_Monster));
             this.border = new System.Windows.Forms.Panel();
             this.about = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,15 +41,20 @@ namespace Cookie_Monster
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.run = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.status = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cookie_status = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.token_status = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.copy_cookie = new System.Windows.Forms.Button();
+            this.copy_token = new System.Windows.Forms.Button();
+            this.copy_playerid = new System.Windows.Forms.Button();
+            this.cookie_status = new System.Windows.Forms.Label();
+            this.token_status = new System.Windows.Forms.Label();
             this.id_status = new System.Windows.Forms.Label();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.label9 = new System.Windows.Forms.Label();
             this.border.SuspendLayout();
+            this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
             // border
@@ -145,7 +150,7 @@ namespace Cookie_Monster
             this.coffee.FlatAppearance.BorderSize = 0;
             this.coffee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.coffee.ForeColor = System.Drawing.Color.DimGray;
-            this.coffee.Location = new System.Drawing.Point(204, 174);
+            this.coffee.Location = new System.Drawing.Point(162, 267);
             this.coffee.Name = "coffee";
             this.coffee.Size = new System.Drawing.Size(75, 23);
             this.coffee.TabIndex = 8;
@@ -160,7 +165,7 @@ namespace Cookie_Monster
             this.discord.FlatAppearance.BorderSize = 0;
             this.discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.discord.ForeColor = System.Drawing.Color.DimGray;
-            this.discord.Location = new System.Drawing.Point(123, 174);
+            this.discord.Location = new System.Drawing.Point(81, 267);
             this.discord.Name = "discord";
             this.discord.Size = new System.Drawing.Size(75, 23);
             this.discord.TabIndex = 9;
@@ -171,7 +176,7 @@ namespace Cookie_Monster
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(370, 44);
+            this.label3.Location = new System.Drawing.Point(336, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 19;
@@ -180,7 +185,7 @@ namespace Cookie_Monster
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(325, 44);
+            this.label4.Location = new System.Drawing.Point(291, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 18;
@@ -193,7 +198,7 @@ namespace Cookie_Monster
             this.run.FlatAppearance.BorderSize = 0;
             this.run.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.run.ForeColor = System.Drawing.Color.DimGray;
-            this.run.Location = new System.Drawing.Point(164, 118);
+            this.run.Location = new System.Drawing.Point(243, 267);
             this.run.Name = "run";
             this.run.Size = new System.Drawing.Size(75, 23);
             this.run.TabIndex = 20;
@@ -201,20 +206,11 @@ namespace Cookie_Monster
             this.run.UseVisualStyleBackColor = false;
             this.run.Click += new System.EventHandler(this.run_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Status:";
-            // 
             // status
             // 
             this.status.AutoSize = true;
             this.status.ForeColor = System.Drawing.Color.Orange;
-            this.status.Location = new System.Drawing.Point(71, 44);
+            this.status.Location = new System.Drawing.Point(55, 187);
             this.status.Name = "status";
             this.status.Size = new System.Drawing.Size(45, 13);
             this.status.TabIndex = 21;
@@ -223,90 +219,167 @@ namespace Cookie_Monster
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 70);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(9, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 24;
             this.label1.Text = "Cookie:";
             // 
-            // cookie_status
-            // 
-            this.cookie_status.AutoSize = true;
-            this.cookie_status.ForeColor = System.Drawing.Color.Orange;
-            this.cookie_status.Location = new System.Drawing.Point(71, 70);
-            this.cookie_status.Name = "cookie_status";
-            this.cookie_status.Size = new System.Drawing.Size(45, 13);
-            this.cookie_status.TabIndex = 23;
-            this.cookie_status.Text = "stopped";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 83);
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(9, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 26;
             this.label6.Text = "Token:";
             // 
-            // token_status
-            // 
-            this.token_status.AutoSize = true;
-            this.token_status.ForeColor = System.Drawing.Color.Orange;
-            this.token_status.Location = new System.Drawing.Point(71, 83);
-            this.token_status.Name = "token_status";
-            this.token_status.Size = new System.Drawing.Size(45, 13);
-            this.token_status.TabIndex = 25;
-            this.token_status.Text = "stopped";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 96);
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(9, 123);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 28;
             this.label7.Text = "Player ID:";
             // 
+            // copy_cookie
+            // 
+            this.copy_cookie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.copy_cookie.Enabled = false;
+            this.copy_cookie.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.copy_cookie.FlatAppearance.BorderSize = 0;
+            this.copy_cookie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_cookie.ForeColor = System.Drawing.Color.DimGray;
+            this.copy_cookie.Location = new System.Drawing.Point(288, 66);
+            this.copy_cookie.Name = "copy_cookie";
+            this.copy_cookie.Size = new System.Drawing.Size(75, 23);
+            this.copy_cookie.TabIndex = 32;
+            this.copy_cookie.Text = "Copy";
+            this.copy_cookie.UseVisualStyleBackColor = false;
+            this.copy_cookie.Click += new System.EventHandler(this.copy_cookie_Click);
+            // 
+            // copy_token
+            // 
+            this.copy_token.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.copy_token.Enabled = false;
+            this.copy_token.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.copy_token.FlatAppearance.BorderSize = 0;
+            this.copy_token.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_token.ForeColor = System.Drawing.Color.DimGray;
+            this.copy_token.Location = new System.Drawing.Point(288, 92);
+            this.copy_token.Name = "copy_token";
+            this.copy_token.Size = new System.Drawing.Size(75, 23);
+            this.copy_token.TabIndex = 33;
+            this.copy_token.Text = "Copy";
+            this.copy_token.UseVisualStyleBackColor = false;
+            this.copy_token.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // copy_playerid
+            // 
+            this.copy_playerid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.copy_playerid.Enabled = false;
+            this.copy_playerid.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.copy_playerid.FlatAppearance.BorderSize = 0;
+            this.copy_playerid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy_playerid.ForeColor = System.Drawing.Color.DimGray;
+            this.copy_playerid.Location = new System.Drawing.Point(288, 118);
+            this.copy_playerid.Name = "copy_playerid";
+            this.copy_playerid.Size = new System.Drawing.Size(75, 23);
+            this.copy_playerid.TabIndex = 34;
+            this.copy_playerid.Text = "Copy";
+            this.copy_playerid.UseVisualStyleBackColor = false;
+            this.copy_playerid.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cookie_status
+            // 
+            this.cookie_status.ForeColor = System.Drawing.Color.Orange;
+            this.cookie_status.Location = new System.Drawing.Point(74, 71);
+            this.cookie_status.Name = "cookie_status";
+            this.cookie_status.Size = new System.Drawing.Size(195, 13);
+            this.cookie_status.TabIndex = 32;
+            this.cookie_status.Text = "not set";
+            // 
+            // token_status
+            // 
+            this.token_status.ForeColor = System.Drawing.Color.Orange;
+            this.token_status.Location = new System.Drawing.Point(74, 97);
+            this.token_status.Name = "token_status";
+            this.token_status.Size = new System.Drawing.Size(195, 13);
+            this.token_status.TabIndex = 32;
+            this.token_status.Text = "not set";
+            // 
             // id_status
             // 
-            this.id_status.AutoSize = true;
             this.id_status.ForeColor = System.Drawing.Color.Orange;
-            this.id_status.Location = new System.Drawing.Point(71, 96);
+            this.id_status.Location = new System.Drawing.Point(74, 123);
             this.id_status.Name = "id_status";
-            this.id_status.Size = new System.Drawing.Size(45, 13);
-            this.id_status.TabIndex = 27;
-            this.id_status.Text = "stopped";
+            this.id_status.Size = new System.Drawing.Size(195, 13);
+            this.id_status.TabIndex = 32;
+            this.id_status.Text = "not set";
             // 
-            // Form1
+            // bunifuCards1
+            // 
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.Transparent;
+            this.bunifuCards1.Controls.Add(this.id_status);
+            this.bunifuCards1.Controls.Add(this.token_status);
+            this.bunifuCards1.Controls.Add(this.label3);
+            this.bunifuCards1.Controls.Add(this.label4);
+            this.bunifuCards1.Controls.Add(this.cookie_status);
+            this.bunifuCards1.Controls.Add(this.copy_playerid);
+            this.bunifuCards1.Controls.Add(this.copy_token);
+            this.bunifuCards1.Controls.Add(this.status);
+            this.bunifuCards1.Controls.Add(this.copy_cookie);
+            this.bunifuCards1.Controls.Add(this.label9);
+            this.bunifuCards1.Controls.Add(this.label1);
+            this.bunifuCards1.Controls.Add(this.label7);
+            this.bunifuCards1.Controls.Add(this.label6);
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(12, 36);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(376, 225);
+            this.bunifuCards1.TabIndex = 33;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 187);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Status:";
+            // 
+            // Cookie_Monster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(400, 209);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.id_status);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.token_status);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cookie_status);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.status);
+            this.ClientSize = new System.Drawing.Size(400, 307);
+            this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.run);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.coffee);
             this.Controls.Add(this.discord);
             this.Controls.Add(this.border);
             this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Cookie_Monster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cookie Monster";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.border.ResumeLayout(false);
             this.border.PerformLayout();
+            this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -323,14 +396,18 @@ namespace Cookie_Monster
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button run;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label status;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label cookie_status;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label token_status;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button copy_cookie;
+        private System.Windows.Forms.Button copy_playerid;
+        private System.Windows.Forms.Button copy_token;
+        private System.Windows.Forms.Label cookie_status;
+        private System.Windows.Forms.Label token_status;
         private System.Windows.Forms.Label id_status;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.Label label9;
     }
 }
 

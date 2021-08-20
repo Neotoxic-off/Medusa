@@ -1,1 +1,24 @@
-{"version":"1.3.0","background":"C:\\Users\\paulg\\Documents\\Code\\DEAD BY DAYLIGHT\\Medusa\\Nysa\\Nysa\\bin\\Debug\\resources\\grisaia.png","blur":"75, 0, 0, 0","minimalist":true,"color":"21, 22, 28","tools":[{"name":"Slock","link":"https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Slock.rar","version":"1.0.0"},{"name":"Splash","link":"https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Splash.rar","version":"1.0.0"}]}
+{
+    "version": "2.3.0",
+    "background": "resources\\grisaia.png",
+    "blur": "75,0,0,0",
+    "minimalist": true,
+    "color": "255,21,22,28",
+    "tools": [{
+        "name": "Slock",
+        "link": "https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Slock.rar",
+        "version": "1.0.0"
+    }, {
+        "name": "Splash",
+        "link": "https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Splash.rar",
+        "version": "1.0.0"
+    }, {
+        "name": "Cookie Monster",
+        "link": "https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Cookie_Monster.rar",
+        "version": "1.0.0"
+    }, {
+        "name": "Image Convert",
+        "link": "https://github.com/Neotoxic-off/Nysa/releases/download/1.0.0/Image_Convert.rar",
+        "version": "1.0.0"
+    }]
+}

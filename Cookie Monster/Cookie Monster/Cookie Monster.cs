@@ -10,27 +10,29 @@ using System.Windows.Forms;
 using System.Diagnostics;
 
 using Fiddler;
+using System.IO;
 
 namespace Cookie_Monster
 {
-    public partial class Form1 : Form
+    public partial class Cookie_Monster : Form
     {
         bool mouse_down = false;
         private Point offset;
 
-        string playername = null;
+        bool dump = false;
         string playerID = null;
         string token = null;
         string bhvrsession = null;
 
-        public Form1()
+        public Cookie_Monster()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            status.Text = "ready";
+            status.ForeColor = Color.LimeGreen;
         }
 
         private void about_Click(object sender, EventArgs e)
@@ -94,6 +96,9 @@ namespace Cookie_Monster
 
         public bool InstallCertificate()
         {
+            status.Text = "installing certificates";
+            status.ForeColor = Color.Cyan;
+
             if (!CertMaker.rootCertExists())
             {
                 if (!CertMaker.createRootCert())
@@ -123,19 +128,21 @@ namespace Cookie_Monster
                 {
                     if (sess.RequestHeaders.ToString().Contains("bhvrSession=") && bhvrsession == null)
                     {
-                        bhvrsession = sess.RequestHeaders["Cookie"];
+                        bhvrsession = sess.RequestHeaders["Cookie"].Replace("bhvrSession=", "");
                         BeginInvoke(new Action(delegate {
                             cookie_status.Text = "grabbed";
                             cookie_status.ForeColor = Color.LimeGreen;
+                            copy_cookie.Enabled = true;
                         }));
                     }
 
                     if (sess.fullUrl.Contains("token=") && token == null)
                     {
-                        token = sess.fullUrl.Split('=')[1];
+                        token = sess.fullUrl.Replace("token=", ""); ;
                         BeginInvoke(new Action(delegate {
                             token_status.Text = "grabbed";
                             token_status.ForeColor = Color.LimeGreen;
+                            copy_token.Enabled = true;
                         }));
                     }
 
@@ -145,7 +152,16 @@ namespace Cookie_Monster
                         BeginInvoke(new Action(delegate {
                             id_status.Text = "grabbed";
                             id_status.ForeColor = Color.LimeGreen;
+                            copy_playerid.Enabled = true;
                         }));
+                    }
+
+                    if (playerID != null && token != null && bhvrsession != null && dump == false)
+                    {
+                        Cursor = Cursors.WaitCursor;
+                        File.AppendAllText($"cookie.txt", $"\nbhvrsession: {bhvrsession}\ntoken: {token}\nplayerID: {playerID}\n");
+                        dump = true;
+                        Cursor = Cursors.Default;
                     }
                 }
             }
@@ -183,6 +199,42 @@ namespace Cookie_Monster
             run.Enabled = false;
             InstallCertificate();
             Start();
+            status.Text = "running";
+            status.ForeColor = Color.LimeGreen;
+
+            cookie_status.Text = "searching";
+            cookie_status.ForeColor = Color.Orange;
+            token_status.Text = "searching";
+            token_status.ForeColor = Color.Orange;
+            id_status.Text = "searching";
+            id_status.ForeColor = Color.Orange;
+            Cursor = Cursors.Default;
+        }
+
+        private void copy_cookie_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Clipboard.SetText(bhvrsession);
+            status.Text = "cookie copied";
+            status.ForeColor = Color.DeepPink;
+            Cursor = Cursors.Default;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Clipboard.SetText(token);
+            status.Text = "token copied";
+            status.ForeColor = Color.DeepPink;
+            Cursor = Cursors.Default;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Clipboard.SetText(playerID);
+            status.Text = "playerID copied";
+            status.ForeColor = Color.DeepPink;
             Cursor = Cursors.Default;
         }
     }

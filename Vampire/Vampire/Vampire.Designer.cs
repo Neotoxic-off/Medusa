@@ -39,14 +39,12 @@ namespace Vampire
             this.secret = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.inject = new System.Windows.Forms.Button();
             this.allbloodpoint = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.coffee = new System.Windows.Forms.Button();
             this.discord = new System.Windows.Forms.Button();
+            this.inject = new System.Windows.Forms.Button();
             this.border.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // border
@@ -88,6 +86,7 @@ namespace Vampire
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -98,6 +97,7 @@ namespace Vampire
             // 
             this.version.AutoSize = true;
             this.version.BackColor = System.Drawing.Color.Transparent;
+            this.version.ForeColor = System.Drawing.Color.DimGray;
             this.version.Location = new System.Drawing.Point(62, 9);
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(31, 13);
@@ -143,7 +143,8 @@ namespace Vampire
             // secret
             // 
             this.secret.AutoSize = true;
-            this.secret.Location = new System.Drawing.Point(143, 98);
+            this.secret.ForeColor = System.Drawing.Color.DimGray;
+            this.secret.Location = new System.Drawing.Point(143, 137);
             this.secret.Name = "secret";
             this.secret.Size = new System.Drawing.Size(107, 17);
             this.secret.TabIndex = 2;
@@ -154,6 +155,7 @@ namespace Vampire
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(316, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
@@ -163,31 +165,18 @@ namespace Vampire
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
             this.label3.Location = new System.Drawing.Point(361, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 4;
             this.label3.Text = "Neo";
             // 
-            // inject
-            // 
-            this.inject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.inject.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.inject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inject.ForeColor = System.Drawing.Color.DimGray;
-            this.inject.Location = new System.Drawing.Point(129, 69);
-            this.inject.Name = "inject";
-            this.inject.Size = new System.Drawing.Size(125, 23);
-            this.inject.TabIndex = 5;
-            this.inject.Text = "Cookie from Clipboard";
-            this.inject.UseVisualStyleBackColor = false;
-            this.inject.Click += new System.EventHandler(this.inject_Click);
-            // 
             // allbloodpoint
             // 
             this.allbloodpoint.AutoSize = true;
             this.allbloodpoint.ForeColor = System.Drawing.Color.Orange;
-            this.allbloodpoint.Location = new System.Drawing.Point(197, 140);
+            this.allbloodpoint.Location = new System.Drawing.Point(83, 43);
             this.allbloodpoint.Name = "allbloodpoint";
             this.allbloodpoint.Size = new System.Drawing.Size(57, 13);
             this.allbloodpoint.TabIndex = 6;
@@ -196,22 +185,12 @@ namespace Vampire
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(126, 140);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(12, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Bloodpoints:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.coffee);
-            this.groupBox2.Controls.Add(this.discord);
-            this.groupBox2.Location = new System.Drawing.Point(100, 159);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(182, 54);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
             // 
             // coffee
             // 
@@ -219,7 +198,8 @@ namespace Vampire
             this.coffee.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.coffee.FlatAppearance.BorderSize = 0;
             this.coffee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.coffee.Location = new System.Drawing.Point(101, 19);
+            this.coffee.ForeColor = System.Drawing.Color.DimGray;
+            this.coffee.Location = new System.Drawing.Point(205, 190);
             this.coffee.Name = "coffee";
             this.coffee.Size = new System.Drawing.Size(75, 23);
             this.coffee.TabIndex = 6;
@@ -233,13 +213,28 @@ namespace Vampire
             this.discord.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.discord.FlatAppearance.BorderSize = 0;
             this.discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.discord.Location = new System.Drawing.Point(6, 19);
+            this.discord.ForeColor = System.Drawing.Color.DimGray;
+            this.discord.Location = new System.Drawing.Point(124, 190);
             this.discord.Name = "discord";
             this.discord.Size = new System.Drawing.Size(75, 23);
             this.discord.TabIndex = 7;
             this.discord.Text = "Discord";
             this.discord.UseVisualStyleBackColor = false;
             this.discord.Click += new System.EventHandler(this.discord_Click);
+            // 
+            // inject
+            // 
+            this.inject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.inject.FlatAppearance.BorderSize = 0;
+            this.inject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inject.ForeColor = System.Drawing.Color.DimGray;
+            this.inject.Location = new System.Drawing.Point(124, 108);
+            this.inject.Name = "inject";
+            this.inject.Size = new System.Drawing.Size(156, 23);
+            this.inject.TabIndex = 8;
+            this.inject.Text = "Cookie from clipboard";
+            this.inject.UseVisualStyleBackColor = false;
+            this.inject.Click += new System.EventHandler(this.inject_Click_1);
             // 
             // Vampire
             // 
@@ -248,10 +243,11 @@ namespace Vampire
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(400, 225);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.inject);
+            this.Controls.Add(this.discord);
+            this.Controls.Add(this.coffee);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.allbloodpoint);
-            this.Controls.Add(this.inject);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.secret);
@@ -262,11 +258,10 @@ namespace Vampire
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Vampire";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Vampire";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.border.ResumeLayout(false);
             this.border.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,12 +278,11 @@ namespace Vampire
         private System.Windows.Forms.CheckBox secret;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button inject;
         private System.Windows.Forms.Label allbloodpoint;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button coffee;
         private System.Windows.Forms.Button discord;
+        private System.Windows.Forms.Button inject;
     }
 }
 

@@ -117,7 +117,7 @@ namespace Splash
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(31, 13);
             this.version.TabIndex = 8;
-            this.version.Text = "1.0.0";
+            this.version.Text = "1.1.0";
             // 
             // minimize
             // 

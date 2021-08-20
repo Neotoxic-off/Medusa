@@ -1,0 +1,210 @@
+{
+    "survivors" : [
+        {
+            "id" : 0,
+            "name": "Dwight Fairfield"
+        },
+        {
+            "id" : 1,
+            "name": "Meg Thomas"
+        },
+        {
+            "id" : 2,
+            "name": "Claudette Morel"
+        },
+        {
+            "id" : 3,
+            "name": "Jake Park"
+        },
+        {
+            "id" : 4,
+            "name": "Nea Karlsson"
+        },
+        {
+            "id" : 5,
+            "name": "Laurie Strode"
+        },
+        {
+            "id" : 6,
+            "name": "Ace Visconti"
+        },
+        {
+            "id" : 7,
+            "name": "Bill Overbeck"
+        },
+        {
+            "id" : 8,
+            "name": "Feng Min"
+        },
+        {
+            "id" : 9,
+            "name": "David King"
+        },
+        {
+            "id" : 10,
+            "name": "Kate Denson"
+        },
+        {
+            "id" : 11,
+            "name": "Quentin Smith"
+        },
+        {
+            "id" : 12,
+            "name": "David Tapp"
+        },
+        {
+            "id" : 13,
+            "name": "Adam Francis"
+        },
+        {
+            "id" : 14,
+            "name": "Jeff Johansen"
+        },
+        {
+            "id" : 15,
+            "name": "Jane Romero"
+        },
+        {
+            "id" : 16,
+            "name": "Ash J. Williams"
+        },
+        {
+            "id" : 17,
+            "name": "Nancy Wheeler"
+        },
+        {
+            "id" : 18,
+            "name": "Steve Harrington"
+        },
+        {
+            "id" : 19,
+            "name": "Yui Kimura"
+        },
+        {
+            "id" : 20,
+            "name": "Zarina Kassir"
+        },
+        {
+            "id" : 21,
+            "name": "Cheryl Mason"
+        },
+        {
+            "id" : 22,
+            "name": "Felix Richter"
+        },
+        {
+            "id" : 23,
+            "name": "Élodie Rakoto"
+        },
+        {
+            "id" : 24,
+            "name": "Yun-Jin Lee"
+        },
+        {
+            "id" : 25,
+            "name": "Jill Valentine"
+        },
+        {
+            "id" : 26,
+            "name": "Leon Scott Kennedy"
+        }
+    ],
+    "killers" : [
+        {
+            "id" : 268435456,
+            "name" : "Trapper"
+        },
+        {
+            "id" : 268435457,
+            "name" : "Wraith"
+        },
+        {
+            "id" : 268435458,
+            "name" : "Hillbilly"
+        },
+        {
+            "id" : 268435459,
+            "name" : "Nurse"
+        },
+        {
+            "id" : 268435460,
+            "name" : "Hag"
+        },
+        {
+            "id" : 268435461,
+            "name" : "Shape"
+        },
+        {
+            "id" : 268435462,
+            "name" : "Doctor"
+        },
+        {
+            "id" : 268435463,
+            "name" : "Huntress"
+        },
+        {
+            "id" : 268435464,
+            "name" : "Cannibal"
+        },
+        {
+            "id" : 268435465,
+            "name" : "Nightmare"
+        },
+        {
+            "id" : 268435466,
+            "name" : "Pig"
+        },
+        {
+            "id" : 268435467,
+            "name" : "Clown"
+        },
+        {
+            "id" : 268435468,
+            "name" : "Spirit"
+        },
+        {
+            "id" : 268435469,
+            "name" : "Legion"
+        },
+        {
+            "id" : 268435470,
+            "name" : "Plague"
+        },
+        {
+            "id" : 268435471,
+            "name" : "GhostFace"
+        },
+        {
+            "id" : 268435472,
+            "name" : "Demogorgon"
+        },
+        {
+            "id" : 268435473,
+            "name" : "Oni"
+        },
+        {
+            "id" : 268435474,
+            "name" : "Deathslinger"
+        },
+        {
+            "id" : 268435475,
+            "name" : "Executioner"
+        },
+        {
+            "id" : 268435476,
+            "name" : "Blight"
+        },
+        {
+            "id" : 268435477,
+            "name" : "Twins"
+        },
+        {
+            "id" : 268435478,
+            "name" : "Trickster"
+        },
+        {
+            "id" : 268435479,
+            "name" : "Nemesis"
+        }
+    ]
+}

@@ -374,17 +374,18 @@ namespace Nysa
             string lastest = null;
 
             Cursor = Cursors.WaitCursor;
-            if (File.Exists(settings_path) == false)
-            {
-                logger("WAIT", "Downloading new settings...").Wait();
-                update_status("downloading").Wait();
-                client.DownloadFile(settings, settings_path);
-                update_status("downloaded").Wait();
-                logger("DONE", "Downloaded new settings").Wait();
-                load_settings().Wait();
-            }
+            
             try
             {
+                if (File.Exists(settings_path) == false)
+                {
+                    logger("WAIT", "Downloading new settings...").Wait();
+                    update_status("downloading").Wait();
+                    client.DownloadFile(settings, settings_path);
+                    update_status("downloaded").Wait();
+                    logger("DONE", "Downloaded new settings").Wait();
+                    load_settings().Wait();
+                }
                 logger("LOAD", "Checking version...").Wait();
                 client.DownloadFile(link, output);
                 if (File.Exists(output) == true)
@@ -449,6 +450,8 @@ namespace Nysa
             Cursor = Cursors.WaitCursor;
             logger("WAIT", "Extracting logs...").Wait();
             update_status("extracting").Wait();
+            if (Directory.Exists(logs_path) == false)
+                Directory.CreateDirectory(logs_path);
             File.AppendAllLines($"{logs_path}\\logs_{date}.txt", logs);
             update_status("extracted").Wait();
             logger("DONE", "Logs extracted").Wait();

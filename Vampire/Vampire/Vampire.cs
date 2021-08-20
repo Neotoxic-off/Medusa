@@ -235,13 +235,6 @@ namespace Vampire
 
         }
 
-        private async void inject_Click(object sender, EventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            Task run = await Task.Run(() => brain());
-            Cursor = Cursors.Default;
-        }
-
         private void secret_CheckedChanged(object sender, EventArgs e)
         {
             if (secret.Checked == true)
@@ -261,6 +254,13 @@ namespace Vampire
         {
             Cursor = Cursors.WaitCursor;
             MessageBox.Show("Paypal: neotoxic.off@gmail.com\n\nHave a nice day", "Buy me a coffee", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Cursor = Cursors.Default;
+        }
+
+        private async void inject_Click_1(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            Task run = await Task.Run(() => brain());
             Cursor = Cursors.Default;
         }
     }

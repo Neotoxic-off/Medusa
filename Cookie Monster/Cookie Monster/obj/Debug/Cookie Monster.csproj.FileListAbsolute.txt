@@ -1,0 +1,14 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\bin\Debug\Cookie Monster.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\bin\Debug\Cookie Monster.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\bin\Debug\Cookie Monster.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\bin\Debug\FiddlerCore.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\bin\Debug\BCMakeCert.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\bin\Debug\Telerik.NetworkConnections.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie Monster.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie_Monster.Form1.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie_Monster.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie Monster.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie Monster.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie Monster.csproj.CopyComplete
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie Monster.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Cookie Monster\Cookie Monster\obj\Debug\Cookie Monster.pdb

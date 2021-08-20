@@ -163,6 +163,7 @@ namespace Nysa
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -172,6 +173,7 @@ namespace Nysa
             // version
             // 
             this.version.AutoSize = true;
+            this.version.ForeColor = System.Drawing.Color.DimGray;
             this.version.Location = new System.Drawing.Point(62, 9);
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(57, 13);
@@ -182,7 +184,7 @@ namespace Nysa
             // 
             this.tools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
             this.tools.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tools.ForeColor = System.Drawing.Color.DarkGray;
+            this.tools.ForeColor = System.Drawing.Color.DimGray;
             this.tools.FormattingEnabled = true;
             this.tools.Location = new System.Drawing.Point(3, 6);
             this.tools.Name = "tools";
@@ -349,7 +351,7 @@ namespace Nysa
             this.launch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.launch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.launch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.launch.Location = new System.Drawing.Point(10, 263);
+            this.launch.Location = new System.Drawing.Point(10, 222);
             this.launch.Margin = new System.Windows.Forms.Padding(10);
             this.launch.Name = "launch";
             this.launch.Size = new System.Drawing.Size(32, 32);

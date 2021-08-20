@@ -21,6 +21,7 @@ namespace Splash
 
         string eac_splash = null;
         string splash_path = null;
+        string dbd_splash = null;
         OpenFileDialog folder_path = new OpenFileDialog();
 
         public Splash()
@@ -134,6 +135,7 @@ namespace Splash
             if (data != null)
             {
                 eac_splash = $"{data.GetValue("InstallPath")}\\steamapps\\common\\Dead by Daylight\\EasyAntiCheat\\Launcher\\SplashScreen.png";
+                dbd_splash = $"{data.GetValue("InstallPath")}\\steamapps\\common\\Dead by Daylight\\DeadByDaylight\\Content\\Splash\\Splash.bmp";
                 path_install.Text = crop(eac_splash);
                 path_install.ForeColor = Color.LimeGreen;
 
@@ -153,6 +155,7 @@ namespace Splash
             Image image = Image.FromFile(imagename);
 
             image.Save(eac_splash, ImageFormat.Png);
+            image.Save(dbd_splash, ImageFormat.Bmp);
 
             return (Task.CompletedTask);
         }
