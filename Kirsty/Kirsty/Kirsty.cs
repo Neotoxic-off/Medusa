@@ -201,7 +201,10 @@ namespace Kirsty
         {
             folder_path.ShowDialog();
             if (folder_path.FileName.Length > 1)
+            {
+                check_market().Wait();
                 return (1);
+            }
             return (-1);
         }
 
@@ -247,15 +250,26 @@ namespace Kirsty
                         BeginInvoke(new Action(delegate {
                             cookie.Text = sess.RequestHeaders["Cookie"].Replace("bhvrSession=", "");
                             display_cookie_status.Text = "grabbed";
+                            copy.Enabled = true;
                         }));
                     }
-                }
-                if (sess.fullUrl.Contains("/v1/inventories") == true)
-                {
-                    sess.bBufferResponse = true;
+                    if (sess.fullUrl.Contains(settings.url) == true)
+                    {
+                        sess.bBufferResponse = true;
 
-                    sess.utilDecodeResponse();
-                    sess.utilSetResponseBody(market_data);
+                        sess.utilDecodeResponse();
+                        sess.utilSetResponseBody(market_data);
+                        BeginInvoke(new Action(delegate {
+                            if (sess.GetResponseBodyAsString() == market_data)
+                            {
+                                update_status("market injected").Wait();
+                            }
+                            else
+                            {
+                                update_status("market fail to inject").Wait();
+                            }
+                        }));
+                    }
                 }
             }
 
@@ -275,14 +289,15 @@ namespace Kirsty
                 .Build();
             FiddlerApplication.Startup(startupSettings);
 
-            FiddlerApplication.BeforeResponse += Bypasser;
             FiddlerApplication.BeforeRequest += FiddlerApplication_BeforeRequest;
+            FiddlerApplication.BeforeResponse += Bypasser;
 
             update_status("running").Wait();
         }
 
         public void Stop()
         {
+            FiddlerApplication.BeforeRequest -= FiddlerApplication_BeforeRequest;
             FiddlerApplication.BeforeResponse -= Bypasser;
 
             if (FiddlerApplication.IsStarted())
@@ -320,24 +335,20 @@ namespace Kirsty
 
         private Task autorun()
         {
-            Cursor = Cursors.WaitCursor;
             start.Enabled = false;
             InstallCertificate();
             Start();
             stop.Enabled = true;
-            Cursor = Cursors.Default;
 
             return (Task.CompletedTask);
         }
 
         private Task autostop()
         {
-            Cursor = Cursors.WaitCursor;
             stop.Enabled = false;
             UninstallCertificate();
             Stop();
             start.Enabled = true;
-            Cursor = Cursors.Default;
 
             return (Task.CompletedTask);
         }
@@ -353,6 +364,17 @@ namespace Kirsty
         {
             Cursor = Cursors.WaitCursor;
             autostop().Wait();
+            Cursor = Cursors.Default;
+        }
+
+        private void copy_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            if (cookie.Text.Length > 0)
+            {
+                Clipboard.SetText(cookie.Text);
+                BOX("Cookie copied to clipboard", "Cookie copied", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             Cursor = Cursors.Default;
         }
     }

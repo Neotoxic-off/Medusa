@@ -32,6 +32,9 @@ namespace Kirsty
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kirsty));
             this.border = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.about = new System.Windows.Forms.Button();
+            this.exit = new System.Windows.Forms.Button();
+            this.minimize = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.version = new System.Windows.Forms.Label();
             this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
@@ -43,6 +46,7 @@ namespace Kirsty
             this.display_autorun_status = new System.Windows.Forms.Label();
             this.autorun_status = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.cookie = new System.Windows.Forms.TextBox();
             this.display_streammer_status = new System.Windows.Forms.Label();
             this.streammer_status = new System.Windows.Forms.Label();
             this.display_streammer_username = new System.Windows.Forms.Label();
@@ -55,11 +59,8 @@ namespace Kirsty
             this.status = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.about = new System.Windows.Forms.Button();
-            this.exit = new System.Windows.Forms.Button();
-            this.minimize = new System.Windows.Forms.Button();
             this.folder_path = new System.Windows.Forms.OpenFileDialog();
-            this.cookie = new System.Windows.Forms.TextBox();
+            this.copy = new System.Windows.Forms.Button();
             this.border.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
@@ -96,6 +97,57 @@ namespace Kirsty
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(156, 30);
             this.panel1.TabIndex = 12;
+            // 
+            // about
+            // 
+            this.about.BackColor = System.Drawing.Color.Transparent;
+            this.about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("about.BackgroundImage")));
+            this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.about.FlatAppearance.BorderSize = 0;
+            this.about.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.about.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.about.Location = new System.Drawing.Point(38, 7);
+            this.about.Name = "about";
+            this.about.Size = new System.Drawing.Size(16, 16);
+            this.about.TabIndex = 9;
+            this.about.UseVisualStyleBackColor = false;
+            this.about.Click += new System.EventHandler(this.about_Click);
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.Transparent;
+            this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
+            this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.exit.FlatAppearance.BorderSize = 0;
+            this.exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.exit.Location = new System.Drawing.Point(128, 6);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(16, 16);
+            this.exit.TabIndex = 0;
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // minimize
+            // 
+            this.minimize.BackColor = System.Drawing.Color.Transparent;
+            this.minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimize.BackgroundImage")));
+            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.minimize.FlatAppearance.BorderSize = 0;
+            this.minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
+            this.minimize.Location = new System.Drawing.Point(98, 6);
+            this.minimize.Name = "minimize";
+            this.minimize.Size = new System.Drawing.Size(16, 16);
+            this.minimize.TabIndex = 1;
+            this.minimize.UseVisualStyleBackColor = false;
+            this.minimize.Click += new System.EventHandler(this.minimize_Click);
             // 
             // label2
             // 
@@ -230,14 +282,26 @@ namespace Kirsty
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Transparent;
+            this.bunifuCards1.Controls.Add(this.copy);
             this.bunifuCards1.Controls.Add(this.cookie);
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(12, 257);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(426, 83);
+            this.bunifuCards1.Size = new System.Drawing.Size(426, 80);
             this.bunifuCards1.TabIndex = 29;
+            // 
+            // cookie
+            // 
+            this.cookie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.cookie.ForeColor = System.Drawing.Color.HotPink;
+            this.cookie.Location = new System.Drawing.Point(17, 17);
+            this.cookie.Margin = new System.Windows.Forms.Padding(20);
+            this.cookie.Name = "cookie";
+            this.cookie.ReadOnly = true;
+            this.cookie.Size = new System.Drawing.Size(389, 20);
+            this.cookie.TabIndex = 32;
             // 
             // display_streammer_status
             // 
@@ -382,69 +446,25 @@ namespace Kirsty
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // about
-            // 
-            this.about.BackColor = System.Drawing.Color.Transparent;
-            this.about.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("about.BackgroundImage")));
-            this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.about.FlatAppearance.BorderSize = 0;
-            this.about.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.about.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.about.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.about.Location = new System.Drawing.Point(38, 7);
-            this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(16, 16);
-            this.about.TabIndex = 9;
-            this.about.UseVisualStyleBackColor = false;
-            this.about.Click += new System.EventHandler(this.about_Click);
-            // 
-            // exit
-            // 
-            this.exit.BackColor = System.Drawing.Color.Transparent;
-            this.exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exit.BackgroundImage")));
-            this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.exit.FlatAppearance.BorderSize = 0;
-            this.exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.exit.Location = new System.Drawing.Point(128, 6);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(16, 16);
-            this.exit.TabIndex = 0;
-            this.exit.UseVisualStyleBackColor = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // minimize
-            // 
-            this.minimize.BackColor = System.Drawing.Color.Transparent;
-            this.minimize.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("minimize.BackgroundImage")));
-            this.minimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.minimize.FlatAppearance.BorderSize = 0;
-            this.minimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(30)))), ((int)(((byte)(39)))));
-            this.minimize.Location = new System.Drawing.Point(98, 6);
-            this.minimize.Name = "minimize";
-            this.minimize.Size = new System.Drawing.Size(16, 16);
-            this.minimize.TabIndex = 1;
-            this.minimize.UseVisualStyleBackColor = false;
-            this.minimize.Click += new System.EventHandler(this.minimize_Click);
-            // 
             // folder_path
             // 
             this.folder_path.Filter = "Market format(*.txt *.json)|*.txt;*.json";
             // 
-            // cookie
+            // copy
             // 
-            this.cookie.Location = new System.Drawing.Point(17, 17);
-            this.cookie.Margin = new System.Windows.Forms.Padding(20);
-            this.cookie.Multiline = true;
-            this.cookie.Name = "cookie";
-            this.cookie.Size = new System.Drawing.Size(389, 46);
-            this.cookie.TabIndex = 32;
+            this.copy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
+            this.copy.Enabled = false;
+            this.copy.FlatAppearance.BorderSize = 0;
+            this.copy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.copy.ForeColor = System.Drawing.Color.DimGray;
+            this.copy.Location = new System.Drawing.Point(331, 46);
+            this.copy.Margin = new System.Windows.Forms.Padding(20);
+            this.copy.Name = "copy";
+            this.copy.Size = new System.Drawing.Size(75, 23);
+            this.copy.TabIndex = 20;
+            this.copy.Text = "Copy";
+            this.copy.UseVisualStyleBackColor = false;
+            this.copy.Click += new System.EventHandler(this.copy_Click);
             // 
             // Kirsty
             // 
@@ -518,6 +538,7 @@ namespace Kirsty
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog folder_path;
         private System.Windows.Forms.TextBox cookie;
+        private System.Windows.Forms.Button copy;
     }
 }
 

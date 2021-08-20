@@ -1,1 +1,9 @@
-{"autorun":false,"market":"C:\\Users\\paulg\\Documents\\Code\\DEAD BY DAYLIGHT\\Medusa\\Kirsty\\Kirsty\\bin\\Debug\\Market.json","streammer":{"activated":false,"username":"username"}}
+{
+    "autorun": false,
+    "market": "unknown",
+    "url" : "/v1/inventories",
+    "streammer": {
+        "activated": false,
+        "username": "Neo"
+    }
+}

@@ -1,1 +1,9 @@
-{"autorun":false,"market":"unknown","streammer":{"activated":false,"username":"username"}}
+{
+    "autorun": false,
+    "market": "unknown",
+    "url" : "/v1/inventories",
+    "streammer": {
+        "activated": false,
+        "username": "Neo"
+    }
+}

@@ -12,6 +12,7 @@ namespace Kirsty.classes
         {
             public bool autorun { get; set; }
             public string market { get; set; }
+            public string url { get; set; }
             public Streammer streammer { get; set; }
         }
 
