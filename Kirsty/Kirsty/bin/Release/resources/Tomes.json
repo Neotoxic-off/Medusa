@@ -1,0 +1,92 @@
+{
+    "openStories": ["Tome08", "Tome07", "Tome06", "Tome05", "Tome04", "Tome03", "Tome02", "Tome01"],
+    "storiesStatus": [{
+        "id": "Tome08",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    }, {
+        "id": "Tome07",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    }, {
+        "id": "Tome06",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    }, {
+        "id": "Tome05",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    }, {
+        "id": "Tome04",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    }, {
+        "id": "Tome03",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    }, {
+        "id": "Tome02",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    }, {
+        "id": "Tome01",
+        "levelStatus": [{
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }, {
+            "status": "open"
+        }]
+    },]
+}

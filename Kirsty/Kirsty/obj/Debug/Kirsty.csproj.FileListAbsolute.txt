@@ -79,3 +79,6 @@ C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\obj\Debug\Ki
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\FiddlerCore.dll
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\BCMakeCert.dll
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\Telerik.NetworkConnections.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\DiscordRPC.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\DiscordRPC.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\DiscordRPC.xml

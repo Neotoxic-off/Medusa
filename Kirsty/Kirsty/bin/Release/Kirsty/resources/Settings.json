@@ -1,9 +1,1 @@
-{
-    "autorun": false,
-    "market": "unknown",
-    "url" : "/v1/inventories",
-    "streammer": {
-        "activated": false,
-        "username": "Neo"
-    }
-}
+{"autorun":false,"discord":true,"market":"unknown","url":"/v1/inventories","streammer":{"activated":false,"username":"Neo","tag":"SadBitch"},"unlocker":{"tomes":{"unlock":true,"url":"/v1/archives/stories/get/storiesIds"}}}

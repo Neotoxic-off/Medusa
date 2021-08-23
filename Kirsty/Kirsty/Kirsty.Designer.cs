@@ -41,35 +41,41 @@ namespace Kirsty
             this.stop = new System.Windows.Forms.Button();
             this.start = new System.Windows.Forms.Button();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.display_discord_rpc = new System.Windows.Forms.Label();
+            this.discord_rpc = new System.Windows.Forms.Label();
             this.display_market_path = new System.Windows.Forms.Label();
             this.market_path = new System.Windows.Forms.Label();
             this.display_autorun_status = new System.Windows.Forms.Label();
             this.autorun_status = new System.Windows.Forms.Label();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.cookie = new System.Windows.Forms.TextBox();
             this.display_streammer_status = new System.Windows.Forms.Label();
             this.streammer_status = new System.Windows.Forms.Label();
             this.display_streammer_username = new System.Windows.Forms.Label();
             this.streammer_username = new System.Windows.Forms.Label();
             this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
-            this.display_cookie_status = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.display_friend_tag = new System.Windows.Forms.Label();
+            this.friend_tag = new System.Windows.Forms.Label();
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
             this.status = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.folder_path = new System.Windows.Forms.OpenFileDialog();
-            this.copy = new System.Windows.Forms.Button();
+            this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
+            this.display_cookie_value = new System.Windows.Forms.Label();
+            this.cookie_label = new System.Windows.Forms.Label();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.display_unlock_tomes = new System.Windows.Forms.Label();
+            this.unlock_tomes = new System.Windows.Forms.Label();
+            this.display_queue_position = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.border.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
-            this.bunifuCards1.SuspendLayout();
             this.bunifuCards5.SuspendLayout();
-            this.bunifuCards4.SuspendLayout();
             this.bunifuCards6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.bunifuCards4.SuspendLayout();
+            this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
             // border
@@ -178,7 +184,7 @@ namespace Kirsty
             this.bunifuCards3.Controls.Add(this.stop);
             this.bunifuCards3.Controls.Add(this.start);
             this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(120, 372);
+            this.bunifuCards3.Location = new System.Drawing.Point(122, 372);
             this.bunifuCards3.Margin = new System.Windows.Forms.Padding(10);
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
@@ -223,6 +229,8 @@ namespace Kirsty
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.Transparent;
+            this.bunifuCards2.Controls.Add(this.display_discord_rpc);
+            this.bunifuCards2.Controls.Add(this.discord_rpc);
             this.bunifuCards2.Controls.Add(this.display_market_path);
             this.bunifuCards2.Controls.Add(this.market_path);
             this.bunifuCards2.Controls.Add(this.display_autorun_status);
@@ -232,8 +240,29 @@ namespace Kirsty
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(210, 48);
+            this.bunifuCards2.Size = new System.Drawing.Size(210, 61);
             this.bunifuCards2.TabIndex = 28;
+            // 
+            // display_discord_rpc
+            // 
+            this.display_discord_rpc.ForeColor = System.Drawing.Color.HotPink;
+            this.display_discord_rpc.Location = new System.Drawing.Point(90, 40);
+            this.display_discord_rpc.Name = "display_discord_rpc";
+            this.display_discord_rpc.Size = new System.Drawing.Size(113, 13);
+            this.display_discord_rpc.TabIndex = 6;
+            this.display_discord_rpc.Text = "false";
+            this.display_discord_rpc.Click += new System.EventHandler(this.display_discord_rpc_Click);
+            // 
+            // discord_rpc
+            // 
+            this.discord_rpc.AutoSize = true;
+            this.discord_rpc.Location = new System.Drawing.Point(7, 40);
+            this.discord_rpc.Margin = new System.Windows.Forms.Padding(3);
+            this.discord_rpc.Name = "discord_rpc";
+            this.discord_rpc.Size = new System.Drawing.Size(77, 13);
+            this.discord_rpc.TabIndex = 5;
+            this.discord_rpc.Text = "Discord status:";
+            this.discord_rpc.Click += new System.EventHandler(this.discord_rpc_Click);
             // 
             // display_market_path
             // 
@@ -243,6 +272,7 @@ namespace Kirsty
             this.display_market_path.Size = new System.Drawing.Size(123, 13);
             this.display_market_path.TabIndex = 4;
             this.display_market_path.Text = "unknown";
+            this.display_market_path.Click += new System.EventHandler(this.display_market_path_Click);
             // 
             // market_path
             // 
@@ -264,6 +294,7 @@ namespace Kirsty
             this.display_autorun_status.Size = new System.Drawing.Size(29, 13);
             this.display_autorun_status.TabIndex = 2;
             this.display_autorun_status.Text = "false";
+            this.display_autorun_status.Click += new System.EventHandler(this.display_autorun_status_Click);
             // 
             // autorun_status
             // 
@@ -276,33 +307,6 @@ namespace Kirsty
             this.autorun_status.Text = "Autorun:";
             this.autorun_status.Click += new System.EventHandler(this.autorun_status_Click);
             // 
-            // bunifuCards1
-            // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
-            this.bunifuCards1.BorderRadius = 5;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.Transparent;
-            this.bunifuCards1.Controls.Add(this.copy);
-            this.bunifuCards1.Controls.Add(this.cookie);
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(12, 257);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(426, 80);
-            this.bunifuCards1.TabIndex = 29;
-            // 
-            // cookie
-            // 
-            this.cookie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.cookie.ForeColor = System.Drawing.Color.HotPink;
-            this.cookie.Location = new System.Drawing.Point(17, 17);
-            this.cookie.Margin = new System.Windows.Forms.Padding(20);
-            this.cookie.Name = "cookie";
-            this.cookie.ReadOnly = true;
-            this.cookie.Size = new System.Drawing.Size(389, 20);
-            this.cookie.TabIndex = 32;
-            // 
             // display_streammer_status
             // 
             this.display_streammer_status.AutoSize = true;
@@ -313,6 +317,7 @@ namespace Kirsty
             this.display_streammer_status.Size = new System.Drawing.Size(29, 13);
             this.display_streammer_status.TabIndex = 6;
             this.display_streammer_status.Text = "false";
+            this.display_streammer_status.Click += new System.EventHandler(this.display_streammer_status_Click);
             // 
             // streammer_status
             // 
@@ -334,6 +339,7 @@ namespace Kirsty
             this.display_streammer_username.Size = new System.Drawing.Size(123, 13);
             this.display_streammer_username.TabIndex = 8;
             this.display_streammer_username.Text = "unknown";
+            this.display_streammer_username.Click += new System.EventHandler(this.display_streammer_username_Click);
             // 
             // streammer_username
             // 
@@ -352,6 +358,8 @@ namespace Kirsty
             this.bunifuCards5.BorderRadius = 5;
             this.bunifuCards5.BottomSahddow = true;
             this.bunifuCards5.color = System.Drawing.Color.Transparent;
+            this.bunifuCards5.Controls.Add(this.display_friend_tag);
+            this.bunifuCards5.Controls.Add(this.friend_tag);
             this.bunifuCards5.Controls.Add(this.display_streammer_username);
             this.bunifuCards5.Controls.Add(this.streammer_username);
             this.bunifuCards5.Controls.Add(this.display_streammer_status);
@@ -361,44 +369,30 @@ namespace Kirsty
             this.bunifuCards5.Name = "bunifuCards5";
             this.bunifuCards5.RightSahddow = true;
             this.bunifuCards5.ShadowDepth = 20;
-            this.bunifuCards5.Size = new System.Drawing.Size(210, 48);
+            this.bunifuCards5.Size = new System.Drawing.Size(210, 61);
             this.bunifuCards5.TabIndex = 29;
             // 
-            // bunifuCards4
+            // display_friend_tag
             // 
-            this.bunifuCards4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
-            this.bunifuCards4.BorderRadius = 5;
-            this.bunifuCards4.BottomSahddow = true;
-            this.bunifuCards4.color = System.Drawing.Color.Transparent;
-            this.bunifuCards4.Controls.Add(this.display_cookie_status);
-            this.bunifuCards4.Controls.Add(this.label5);
-            this.bunifuCards4.LeftSahddow = false;
-            this.bunifuCards4.Location = new System.Drawing.Point(228, 217);
-            this.bunifuCards4.Name = "bunifuCards4";
-            this.bunifuCards4.RightSahddow = true;
-            this.bunifuCards4.ShadowDepth = 20;
-            this.bunifuCards4.Size = new System.Drawing.Size(210, 34);
-            this.bunifuCards4.TabIndex = 29;
+            this.display_friend_tag.ForeColor = System.Drawing.Color.HotPink;
+            this.display_friend_tag.Location = new System.Drawing.Point(77, 40);
+            this.display_friend_tag.Margin = new System.Windows.Forms.Padding(10);
+            this.display_friend_tag.Name = "display_friend_tag";
+            this.display_friend_tag.Size = new System.Drawing.Size(123, 13);
+            this.display_friend_tag.TabIndex = 10;
+            this.display_friend_tag.Text = "unknown";
+            this.display_friend_tag.Click += new System.EventHandler(this.display_friend_tag_Click);
             // 
-            // display_cookie_status
+            // friend_tag
             // 
-            this.display_cookie_status.AutoSize = true;
-            this.display_cookie_status.ForeColor = System.Drawing.Color.HotPink;
-            this.display_cookie_status.Location = new System.Drawing.Point(56, 10);
-            this.display_cookie_status.Name = "display_cookie_status";
-            this.display_cookie_status.Size = new System.Drawing.Size(29, 13);
-            this.display_cookie_status.TabIndex = 2;
-            this.display_cookie_status.Text = "false";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 10);
-            this.label5.Margin = new System.Windows.Forms.Padding(3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Cookie:";
+            this.friend_tag.AutoSize = true;
+            this.friend_tag.Location = new System.Drawing.Point(10, 40);
+            this.friend_tag.Margin = new System.Windows.Forms.Padding(3);
+            this.friend_tag.Name = "friend_tag";
+            this.friend_tag.Size = new System.Drawing.Size(57, 13);
+            this.friend_tag.TabIndex = 9;
+            this.friend_tag.Text = "Friend tag:";
+            this.friend_tag.Click += new System.EventHandler(this.friend_tag_Click);
             // 
             // bunifuCards6
             // 
@@ -409,7 +403,7 @@ namespace Kirsty
             this.bunifuCards6.Controls.Add(this.status);
             this.bunifuCards6.Controls.Add(this.label3);
             this.bunifuCards6.LeftSahddow = false;
-            this.bunifuCards6.Location = new System.Drawing.Point(12, 217);
+            this.bunifuCards6.Location = new System.Drawing.Point(12, 230);
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = true;
             this.bunifuCards6.ShadowDepth = 20;
@@ -450,21 +444,101 @@ namespace Kirsty
             // 
             this.folder_path.Filter = "Market format(*.txt *.json)|*.txt;*.json";
             // 
-            // copy
+            // bunifuCards4
             // 
-            this.copy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.copy.Enabled = false;
-            this.copy.FlatAppearance.BorderSize = 0;
-            this.copy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.copy.ForeColor = System.Drawing.Color.DimGray;
-            this.copy.Location = new System.Drawing.Point(331, 46);
-            this.copy.Margin = new System.Windows.Forms.Padding(20);
-            this.copy.Name = "copy";
-            this.copy.Size = new System.Drawing.Size(75, 23);
-            this.copy.TabIndex = 20;
-            this.copy.Text = "Copy";
-            this.copy.UseVisualStyleBackColor = false;
-            this.copy.Click += new System.EventHandler(this.copy_Click);
+            this.bunifuCards4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
+            this.bunifuCards4.BorderRadius = 5;
+            this.bunifuCards4.BottomSahddow = true;
+            this.bunifuCards4.color = System.Drawing.Color.Transparent;
+            this.bunifuCards4.Controls.Add(this.display_queue_position);
+            this.bunifuCards4.Controls.Add(this.label4);
+            this.bunifuCards4.Controls.Add(this.display_cookie_value);
+            this.bunifuCards4.Controls.Add(this.cookie_label);
+            this.bunifuCards4.LeftSahddow = false;
+            this.bunifuCards4.Location = new System.Drawing.Point(228, 230);
+            this.bunifuCards4.Name = "bunifuCards4";
+            this.bunifuCards4.RightSahddow = true;
+            this.bunifuCards4.ShadowDepth = 20;
+            this.bunifuCards4.Size = new System.Drawing.Size(210, 49);
+            this.bunifuCards4.TabIndex = 31;
+            // 
+            // display_cookie_value
+            // 
+            this.display_cookie_value.ForeColor = System.Drawing.Color.HotPink;
+            this.display_cookie_value.Location = new System.Drawing.Point(56, 10);
+            this.display_cookie_value.Name = "display_cookie_value";
+            this.display_cookie_value.Size = new System.Drawing.Size(144, 13);
+            this.display_cookie_value.TabIndex = 2;
+            this.display_cookie_value.Text = "unknown";
+            this.display_cookie_value.Click += new System.EventHandler(this.display_cookie_value_Click);
+            // 
+            // cookie_label
+            // 
+            this.cookie_label.AutoSize = true;
+            this.cookie_label.Location = new System.Drawing.Point(7, 10);
+            this.cookie_label.Margin = new System.Windows.Forms.Padding(3);
+            this.cookie_label.Name = "cookie_label";
+            this.cookie_label.Size = new System.Drawing.Size(43, 13);
+            this.cookie_label.TabIndex = 1;
+            this.cookie_label.Text = "Cookie:";
+            this.cookie_label.Click += new System.EventHandler(this.cookie_label_Click);
+            // 
+            // bunifuCards1
+            // 
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
+            this.bunifuCards1.BorderRadius = 5;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.Transparent;
+            this.bunifuCards1.Controls.Add(this.display_unlock_tomes);
+            this.bunifuCards1.Controls.Add(this.unlock_tomes);
+            this.bunifuCards1.LeftSahddow = false;
+            this.bunifuCards1.Location = new System.Drawing.Point(12, 270);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(210, 89);
+            this.bunifuCards1.TabIndex = 31;
+            // 
+            // display_unlock_tomes
+            // 
+            this.display_unlock_tomes.AutoSize = true;
+            this.display_unlock_tomes.ForeColor = System.Drawing.Color.HotPink;
+            this.display_unlock_tomes.Location = new System.Drawing.Point(92, 10);
+            this.display_unlock_tomes.Name = "display_unlock_tomes";
+            this.display_unlock_tomes.Size = new System.Drawing.Size(29, 13);
+            this.display_unlock_tomes.TabIndex = 2;
+            this.display_unlock_tomes.Text = "false";
+            this.display_unlock_tomes.Click += new System.EventHandler(this.display_unlock_tomes_Click);
+            // 
+            // unlock_tomes
+            // 
+            this.unlock_tomes.AutoSize = true;
+            this.unlock_tomes.Location = new System.Drawing.Point(7, 10);
+            this.unlock_tomes.Margin = new System.Windows.Forms.Padding(3);
+            this.unlock_tomes.Name = "unlock_tomes";
+            this.unlock_tomes.Size = new System.Drawing.Size(75, 13);
+            this.unlock_tomes.TabIndex = 1;
+            this.unlock_tomes.Text = "Unlock tomes:";
+            this.unlock_tomes.Click += new System.EventHandler(this.unlock_tomes_Click);
+            // 
+            // display_queue_position
+            // 
+            this.display_queue_position.ForeColor = System.Drawing.Color.HotPink;
+            this.display_queue_position.Location = new System.Drawing.Point(56, 25);
+            this.display_queue_position.Name = "display_queue_position";
+            this.display_queue_position.Size = new System.Drawing.Size(144, 13);
+            this.display_queue_position.TabIndex = 4;
+            this.display_queue_position.Text = "unknown";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Queue:";
             // 
             // Kirsty
             // 
@@ -472,11 +546,11 @@ namespace Kirsty
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(450, 450);
+            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.bunifuCards4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuCards6);
-            this.Controls.Add(this.bunifuCards4);
             this.Controls.Add(this.bunifuCards5);
-            this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.bunifuCards3);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.border);
@@ -486,6 +560,7 @@ namespace Kirsty
             this.Name = "Kirsty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kirsty";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Kirsty_FormClosing);
             this.Load += new System.EventHandler(this.Kirsty_Load);
             this.border.ResumeLayout(false);
             this.border.PerformLayout();
@@ -493,15 +568,15 @@ namespace Kirsty
             this.bunifuCards3.ResumeLayout(false);
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
-            this.bunifuCards1.ResumeLayout(false);
-            this.bunifuCards1.PerformLayout();
             this.bunifuCards5.ResumeLayout(false);
             this.bunifuCards5.PerformLayout();
-            this.bunifuCards4.ResumeLayout(false);
-            this.bunifuCards4.PerformLayout();
             this.bunifuCards6.ResumeLayout(false);
             this.bunifuCards6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.bunifuCards4.ResumeLayout(false);
+            this.bunifuCards4.PerformLayout();
+            this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -521,7 +596,6 @@ namespace Kirsty
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
         private System.Windows.Forms.Label autorun_status;
         private System.Windows.Forms.Label display_autorun_status;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.Label display_market_path;
         private System.Windows.Forms.Label market_path;
         private System.Windows.Forms.Label display_streammer_status;
@@ -529,16 +603,23 @@ namespace Kirsty
         private System.Windows.Forms.Label display_streammer_username;
         private System.Windows.Forms.Label streammer_username;
         private Bunifu.Framework.UI.BunifuCards bunifuCards5;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards4;
-        private System.Windows.Forms.Label display_cookie_status;
-        private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuCards bunifuCards6;
         private System.Windows.Forms.Label status;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog folder_path;
-        private System.Windows.Forms.TextBox cookie;
-        private System.Windows.Forms.Button copy;
+        private System.Windows.Forms.Label display_discord_rpc;
+        private System.Windows.Forms.Label discord_rpc;
+        private System.Windows.Forms.Label display_friend_tag;
+        private System.Windows.Forms.Label friend_tag;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards4;
+        private System.Windows.Forms.Label display_cookie_value;
+        private System.Windows.Forms.Label cookie_label;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.Label display_unlock_tomes;
+        private System.Windows.Forms.Label unlock_tomes;
+        private System.Windows.Forms.Label display_queue_position;
+        private System.Windows.Forms.Label label4;
     }
 }
 

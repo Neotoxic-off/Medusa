@@ -79,3 +79,6 @@ C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\obj\Release\
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\obj\Release\Kirsty.csproj.CopyComplete
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\obj\Release\Kirsty.exe
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\obj\Release\Kirsty.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Release\DiscordRPC.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Release\DiscordRPC.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Release\DiscordRPC.xml

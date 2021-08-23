@@ -135,6 +135,9 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
+    <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
+    </Reference>
     <Reference Include="FiddlerCore">
       <HintPath>..\..\..\__LIB__\FiddlerCore.dll</HintPath>
     </Reference>
@@ -154,7 +157,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\login.cs" />
+    <Compile Include="classes\playername.cs" />
+    <Compile Include="classes\queue.cs" />
     <Compile Include="classes\Settings.cs" />
+    <Compile Include="classes\steam.cs" />
     <Compile Include="form\edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,9 +211,7 @@
     <Content Include="anime-icons-icons-anime-Favim.com-6566283-removebg-preview.ico" />
     <None Include="Resources\toppng.com-kawaii-cats-transparent-png-transparent-download-kawaii-pink-cat-476x292.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="editor\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
