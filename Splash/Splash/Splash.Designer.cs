@@ -46,6 +46,7 @@ namespace Splash
             this.splash_path_ui = new System.Windows.Forms.Label();
             this.path_install = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.custom_path = new System.Windows.Forms.FolderBrowserDialog();
             this.border.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,6 +245,7 @@ namespace Splash
             this.path_install.Size = new System.Drawing.Size(39, 13);
             this.path_install.TabIndex = 24;
             this.path_install.Text = "not set";
+            this.path_install.Click += new System.EventHandler(this.path_install_Click);
             // 
             // label7
             // 
@@ -253,6 +255,10 @@ namespace Splash
             this.label7.Size = new System.Drawing.Size(32, 13);
             this.label7.TabIndex = 23;
             this.label7.Text = "Path:";
+            // 
+            // custom_path
+            // 
+            this.custom_path.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
             // Splash
             // 
@@ -302,6 +308,7 @@ namespace Splash
         private System.Windows.Forms.Label splash_path_ui;
         private System.Windows.Forms.Label path_install;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.FolderBrowserDialog custom_path;
     }
 }
 

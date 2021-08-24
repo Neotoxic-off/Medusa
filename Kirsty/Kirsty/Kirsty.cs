@@ -3,11 +3,12 @@ using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 using DiscordRPC;
 using Newtonsoft.Json;
 using Fiddler;
-using System.Collections.Generic;
+using RestSharp;
 
 namespace Kirsty
 {
@@ -19,17 +20,18 @@ namespace Kirsty
         classes.Settings.Rootobject settings = null;
         classes.playername.Rootobject playername = null;
         classes.steam.Rootobject steam = null;
-        classes.login.Rootobject login = null;
         classes.queue.Rootobject queue = null;
+        classes.matched.Rootobject matched = null;
+        classes.player.Rootobject player = null;
+        classes.currencies.Rootobject currencies = null;
+        classes.pips.Rootobject pips = null;
 
         DiscordRpcClient client = null;
 
         string market_data = null;
-        string tomes_data = null;
 
         static string folder = "resources";
         static string file = "Settings.json";
-        static string tome = "Tomes.json";
 
         public Kirsty()
         {
@@ -149,12 +151,22 @@ namespace Kirsty
         {
             display_autorun_status.Text = $"{settings.autorun}";
             display_market_path.Text = $"{crop(settings.market)}";
+            display_activate_market.Text = $"{settings.activated}";
+
             display_streammer_status.Text = $"{settings.streammer.activated}";
             display_streammer_username.Text = $"{settings.streammer.username}";
+            display_player_level.Text = $"{settings.streammer.level}";
+            display_player_devotion.Text = $"{settings.streammer.devotion}";
+
+            display_player_cells.Text = $"{settings.streammer.currencies.cells}";
+            display_player_shards.Text = $"{settings.streammer.currencies.shards}";
+            display_player_bloodpoints.Text = $"{settings.streammer.currencies.bloodpoints}";
+
+            display_pips_survivors.Text = $"{settings.streammer.pips.survivors}";
+            display_pips_killers.Text = $"{settings.streammer.pips.killers}";
+
             display_discord_rpc.Text = $"{settings.discord}";
             display_friend_tag.Text = $"{settings.streammer.tag}";
-
-            display_unlock_tomes.Text = $"{settings.unlocker.tomes.unlock}";
 
             return (Task.CompletedTask);
         }
@@ -191,23 +203,6 @@ namespace Kirsty
             return (Task.CompletedTask);
         }
 
-        private Task update_tomes()
-        {
-            update_status("loading tomes").Wait();
-            try
-            {
-                tomes_data = File.ReadAllText($"{folder}\\{tome}");
-                update_status("tomes loaded").Wait();
-            }
-            catch (Exception ex)
-            {
-                BOX($"Wrong tomes format:\n{ex}", "Error: tomes format", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Close();
-            }
-
-            return (Task.CompletedTask);
-        }
-
         private Task save_settings()
         {
             if (File.Exists($"{folder}\\{file}") == true)
@@ -223,15 +218,6 @@ namespace Kirsty
             {
                 if (File.Exists($"{folder}\\{file}") == true)
                 {
-                    if (File.Exists($"{folder}\\{tome}") == true)
-                    {
-                        update_tomes().Wait();
-                    }
-                    else
-                    {
-                        BOX($"{folder}\\{tome} file not found", "Error: tomes file", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Close();
-                    }
                     update_settings().Wait();
                     if (settings.autorun == true)
                     {
@@ -288,6 +274,13 @@ namespace Kirsty
 
         private void Streammer_mod(Session sess)
         {
+            Dictionary<string, int> ids = new Dictionary<string, int>()
+            {
+                { "Cells", settings.streammer.currencies.cells },
+                { "Shards", settings.streammer.currencies.shards },
+                { "Bloodpoints", settings.streammer.currencies.bloodpoints }
+            };
+
             if (sess.fullUrl.Contains("/v1/playername") == true)
             {
                 sess.bBufferResponse = true;
@@ -297,7 +290,7 @@ namespace Kirsty
                     sess.GetResponseBodyAsString()
                 );
                 playername.playerName = settings.streammer.username;
-                playername.providerPlayerNames.steam = settings.streammer.username;
+                playername.providerPlayerNames.steam = $"{settings.streammer.username}#{settings.streammer.tag}";;
 
                 sess.utilSetResponseBody(JsonConvert.SerializeObject(playername));
             }
@@ -310,38 +303,74 @@ namespace Kirsty
                     sess.GetResponseBodyAsString()
                 );
                 steam.playerName = settings.streammer.username;
-                steam.providerPlayerNames.steam = $"{settings.streammer.username}#{settings.streammer.tag}";
+                steam.providerPlayerNames.steam = settings.streammer.username;
 
                 sess.utilSetResponseBody(JsonConvert.SerializeObject(steam));
             }
-            if (sess.fullUrl.Contains("/v1/auth/provider/steam") == true)
+            if (sess.fullUrl.Contains("/v1/extensions/playerLevel") == true)
             {
                 sess.bBufferResponse = true;
 
                 sess.utilDecodeResponse();
-                login = JsonConvert.DeserializeObject<classes.login.Rootobject>(
+                player = JsonConvert.DeserializeObject<classes.player.Rootobject>(
                     sess.GetResponseBodyAsString()
                 );
-                login.provider.providerId = "76561199154376974";
-                login.providers[0].providerId = "76561199154376974";
-                sess.utilSetResponseBody(JsonConvert.SerializeObject(login));
+                player.level = settings.streammer.level;
+                player.prestigeLevel = settings.streammer.devotion;
+
+                sess.utilSetResponseBody(JsonConvert.SerializeObject(steam));
+            }
+            if (sess.fullUrl.Contains("/v1/wallet/currencies") == true)
+            {
+                sess.bBufferResponse = true;
+
+                sess.utilDecodeResponse();
+                currencies = JsonConvert.DeserializeObject<classes.currencies.Rootobject>(
+                    sess.GetResponseBodyAsString()
+                );
+                for (int i = 0; i < currencies.list.Count; i++)
+                {
+                    if (ids.ContainsKey(currencies.list[i].currency) == true)
+                        currencies.list[i].balance = ids[currencies.list[i].currency];
+                }
+
+                sess.utilSetResponseBody(JsonConvert.SerializeObject(currencies));
+            }
+            if (sess.fullUrl.Contains("/v1/ranks/reset-get-pips-v2") == true)
+            {
+                sess.bBufferResponse = true;
+
+                sess.utilDecodeResponse();
+                pips = JsonConvert.DeserializeObject<classes.pips.Rootobject>(
+                    sess.GetResponseBodyAsString()
+                );
+                pips.pips.survivorPips = settings.streammer.pips.survivors;
+                pips.pips.killerPips = settings.streammer.pips.killers;
+
+                sess.utilSetResponseBody(JsonConvert.SerializeObject(pips));
             }
         }
 
         private void Bypasser(Session sess)
         {
+            string cookie = null;
+
             if (sess != null && sess.oRequest != null && sess.oRequest.headers != null)
             {
                 if (sess.fullUrl.Contains("bhvrdbd"))
                 {
-                    if (sess.RequestHeaders.ToString().Contains("bhvrSession=") && display_cookie_value.Text.Length == 0)
+                    if (sess.RequestHeaders.ToString().Contains("bhvrSession=") == true)
                     {
-                        BeginInvoke(new Action(delegate {
-                            display_cookie_value.Text = sess.RequestHeaders["Cookie"].Replace("bhvrSession=", "");
-                            update_status("cookie grabbed");
-                        }));
+                        cookie = sess.RequestHeaders["Cookie"].Replace("bhvrSession=", "");
+                        if (cookie != display_cookie_value.Text)
+                        {
+                            BeginInvoke(new Action(delegate {
+                                display_cookie_value.Text = cookie;
+                                update_status("cookie updated");
+                            }));
+                        }
                     }
-                    if (sess.fullUrl.Contains(settings.url) == true)
+                    if (sess.fullUrl.Contains(settings.url) == true && settings.activated == true)
                     {
                         sess.bBufferResponse = true;
 
@@ -358,13 +387,6 @@ namespace Kirsty
                             }
                         }));
                     }
-                    if (sess.fullUrl.Contains(settings.unlocker.tomes.url) == true)
-                    {
-                        sess.bBufferResponse = true;
-
-                        sess.utilDecodeResponse();
-                        sess.utilSetResponseBody(tomes_data);
-                    }
                     if (sess.fullUrl.Contains("/v1/queue") == true)
                     {
                         BeginInvoke(new Action(delegate {
@@ -373,8 +395,20 @@ namespace Kirsty
                                 queue = JsonConvert.DeserializeObject<classes.queue.Rootobject>(
                                     sess.GetResponseBodyAsString()
                                 );
-                                display_queue_position.Text = $"{queue.queueData.position}";
-                                display_queue_position.Refresh();
+                                if (queue.status == "QUEUED")
+                                {
+                                    display_queue_position.Text = $"{queue.queueData.position}";
+                                    display_queue_position.Refresh();
+                                }
+                                if (queue.status == "MATCHED")
+                                {
+                                    display_queue_position.Text = "matched";
+                                    display_queue_position.Refresh();
+                                    matched = JsonConvert.DeserializeObject<classes.matched.Rootobject>(
+                                        sess.GetResponseBodyAsString()
+                                    );
+                                    display_killer_rank.Text = $"{matched.matchData.matchId}";
+                                }
                             } catch (Exception ex)
                             {
                                 display_queue_position.Text = "not in queue";
@@ -382,6 +416,7 @@ namespace Kirsty
                             }
                         }));
                     }
+                    
 
                     if (settings.streammer.activated == true)
                     {
@@ -671,16 +706,16 @@ namespace Kirsty
             GCC().Wait();
         }
 
-        private Task GUT()
+        private Task GAM()
         {
             Cursor = Cursors.WaitCursor;
-            if (settings.unlocker.tomes.unlock == true)
+            if (settings.activated == true)
             {
-                settings.unlocker.tomes.unlock = false;
+                settings.activated = false;
             }
             else
             {
-                settings.unlocker.tomes.unlock = true;
+                settings.activated = true;
             }
             save_settings().Wait();
             update_ui().Wait();
@@ -689,14 +724,175 @@ namespace Kirsty
             return (Task.CompletedTask);
         }
 
-        private void display_unlock_tomes_Click(object sender, EventArgs e)
+        private void activate_market_Click(object sender, EventArgs e)
         {
-            GUT().Wait();
+            GAM().Wait();
         }
 
-        private void unlock_tomes_Click(object sender, EventArgs e)
+        private void display_activate_market_Click(object sender, EventArgs e)
         {
-            GUT().Wait();
+            GAM().Wait();
+        }
+
+        private Task GPL()
+        {
+            Cursor = Cursors.WaitCursor;
+            form.edit_number editor = new form.edit_number("Player level", display_player_level.Text);
+            editor.ShowDialog();
+            settings.streammer.level = editor.get_data();
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private void player_level_Click(object sender, EventArgs e)
+        {
+            GPL().Wait();
+        }
+
+        private void display_player_level_Click(object sender, EventArgs e)
+        {
+            GPL().Wait();
+        }
+
+        private Task GPD()
+        {
+            Cursor = Cursors.WaitCursor;
+            form.edit_number editor = new form.edit_number("Player devotion", display_player_devotion.Text);
+            editor.ShowDialog();
+            settings.streammer.devotion = editor.get_data();
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private void player_devotion_Click(object sender, EventArgs e)
+        {
+            GPD().Wait();
+        }
+
+        private void display_player_devotion_Click(object sender, EventArgs e)
+        {
+            GPD().Wait();
+        }
+
+        private Task GPC()
+        {
+            Cursor = Cursors.WaitCursor;
+            form.edit_number editor = new form.edit_number("Player cells", display_player_cells.Text);
+            editor.ShowDialog();
+            settings.streammer.currencies.cells = editor.get_data();
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private void display_player_cells_Click(object sender, EventArgs e)
+        {
+            GPC().Wait();
+        }
+
+        private void player_cells_Click(object sender, EventArgs e)
+        {
+            GPC().Wait();
+        }
+
+        private Task GPS()
+        {
+            Cursor = Cursors.WaitCursor;
+            form.edit_number editor = new form.edit_number("Player shards", display_player_shards.Text);
+            editor.ShowDialog();
+            settings.streammer.currencies.shards = editor.get_data();
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private void player_shards_Click(object sender, EventArgs e)
+        {
+            GPS().Wait();
+        }
+
+        private void display_player_shards_Click(object sender, EventArgs e)
+        {
+            GPS().Wait();
+        }
+
+        private Task GPB()
+        {
+            Cursor = Cursors.WaitCursor;
+            form.edit_number editor = new form.edit_number("Player bloodpoints", display_player_bloodpoints.Text);
+            editor.ShowDialog();
+            settings.streammer.currencies.bloodpoints = editor.get_data();
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private void player_bloodpoints_Click(object sender, EventArgs e)
+        {
+            GPB().Wait();
+        }
+
+        private void display_player_bloodpoints_Click(object sender, EventArgs e)
+        {
+            GPB().Wait();
+        }
+
+        private Task GSP()
+        {
+            Cursor = Cursors.WaitCursor;
+            form.edit_pips editor = new form.edit_pips("Survivor pips", display_pips_survivors.Text);
+            editor.ShowDialog();
+            settings.streammer.pips.survivors = editor.get_data();
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private Task GKP()
+        {
+            Cursor = Cursors.WaitCursor;
+            form.edit_pips editor = new form.edit_pips("Killer pips", display_pips_killers.Text);
+            editor.ShowDialog();
+            settings.streammer.pips.killers = editor.get_data();
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private void display_pips_killers_Click(object sender, EventArgs e)
+        {
+            GKP().Wait();
+        }
+
+        private void pips_killers_Click(object sender, EventArgs e)
+        {
+            GKP().Wait();
+        }
+
+        private void display_pips_survivors_Click(object sender, EventArgs e)
+        {
+            GSP().Wait();
+        }
+
+        private void pips_survivors_Click(object sender, EventArgs e)
+        {
+            GSP().Wait();
         }
     }
 }

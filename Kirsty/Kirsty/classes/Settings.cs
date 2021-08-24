@@ -13,9 +13,9 @@ namespace Kirsty.classes
             public bool autorun { get; set; }
             public bool discord { get; set; }
             public string market { get; set; }
+            public bool activated { get; set; }
             public string url { get; set; }
             public Streammer streammer { get; set; }
-            public Unlocker unlocker { get; set; }
         }
 
         public class Streammer
@@ -23,17 +23,23 @@ namespace Kirsty.classes
             public bool activated { get; set; }
             public string username { get; set; }
             public string tag { get; set; }
+            public int level { get; set; }
+            public int devotion { get; set; }
+            public Currencies currencies { get; set; }
+            public Pips pips { get; set; }
         }
 
-        public class Unlocker
+        public class Currencies
         {
-            public Tomes tomes { get; set; }
+            public int cells { get; set; }
+            public int shards { get; set; }
+            public int bloodpoints { get; set; }
         }
 
-        public class Tomes
+        public class Pips
         {
-            public bool unlock { get; set; }
-            public string url { get; set; }
+            public int survivors { get; set; }
+            public int killers { get; set; }
         }
     }
 }

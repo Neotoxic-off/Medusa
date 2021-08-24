@@ -1,1 +1,1 @@
-{"autorun":false,"discord":true,"market":"unknown","url":"/v1/inventories","streammer":{"activated":false,"username":"Neo","tag":"SadBitch"},"unlocker":{"tomes":{"unlock":true,"url":"/v1/archives/stories/get/storiesIds"}}}
+{"autorun":false,"discord":true,"market":"unknown","activated":true,"url":"/v1/inventories","streammer":{"activated":false,"username":"Neo","tag":"SadBitch","level":10,"devotion":0,"currencies":{"cells":0,"shards":0,"bloodpoints":0},"pips":{"survivors":10,"killers":25}}}

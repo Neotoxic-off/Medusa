@@ -174,5 +174,17 @@ namespace Splash
                 MessageBox.Show("The replacement image hasn't be set", "Image not set", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void path_install_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            custom_path.ShowDialog();
+            if (custom_path.SelectedPath.Length > 0)
+            {
+                path_install.Text = custom_path.SelectedPath;
+                eac_splash = $"{custom_path.SelectedPath}\\EasyAntiCheat\\Launcher\\SplashScreen.png";
+            }
+            Cursor = Cursors.Default;
+        }
     }
 }

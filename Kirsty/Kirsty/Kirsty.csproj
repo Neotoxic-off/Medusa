@@ -144,8 +144,12 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -157,11 +161,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="classes\login.cs" />
+    <Compile Include="classes\currencies.cs" />
+    <Compile Include="classes\matched.cs" />
+    <Compile Include="classes\pips.cs" />
+    <Compile Include="classes\player.cs" />
     <Compile Include="classes\playername.cs" />
     <Compile Include="classes\queue.cs" />
     <Compile Include="classes\Settings.cs" />
     <Compile Include="classes\steam.cs" />
+    <Compile Include="form\edit_pips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\edit_pips.Designer.cs">
+      <DependentUpon>edit_pips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\edit_number.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\edit_number.Designer.cs">
+      <DependentUpon>edit_number.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\edit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +195,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="form\edit_pips.resx">
+      <DependentUpon>edit_pips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\edit_number.resx">
+      <DependentUpon>edit_number.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\edit.resx">
       <DependentUpon>edit.cs</DependentUpon>
     </EmbeddedResource>

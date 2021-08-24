@@ -41,6 +41,8 @@ namespace Kirsty
             this.stop = new System.Windows.Forms.Button();
             this.start = new System.Windows.Forms.Button();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.display_activate_market = new System.Windows.Forms.Label();
+            this.activate_market = new System.Windows.Forms.Label();
             this.display_discord_rpc = new System.Windows.Forms.Label();
             this.discord_rpc = new System.Windows.Forms.Label();
             this.display_market_path = new System.Windows.Forms.Label();
@@ -52,6 +54,10 @@ namespace Kirsty
             this.display_streammer_username = new System.Windows.Forms.Label();
             this.streammer_username = new System.Windows.Forms.Label();
             this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
+            this.display_player_devotion = new System.Windows.Forms.Label();
+            this.player_devotion = new System.Windows.Forms.Label();
+            this.display_player_level = new System.Windows.Forms.Label();
+            this.player_level = new System.Windows.Forms.Label();
             this.display_friend_tag = new System.Windows.Forms.Label();
             this.friend_tag = new System.Windows.Forms.Label();
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
@@ -60,13 +66,25 @@ namespace Kirsty
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.folder_path = new System.Windows.Forms.OpenFileDialog();
             this.bunifuCards4 = new Bunifu.Framework.UI.BunifuCards();
-            this.display_cookie_value = new System.Windows.Forms.Label();
-            this.cookie_label = new System.Windows.Forms.Label();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.display_unlock_tomes = new System.Windows.Forms.Label();
-            this.unlock_tomes = new System.Windows.Forms.Label();
+            this.display_killer_rank = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.display_queue_position = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.display_cookie_value = new System.Windows.Forms.Label();
+            this.cookie_label = new System.Windows.Forms.Label();
+            this.display_player_cells = new System.Windows.Forms.Label();
+            this.player_cells = new System.Windows.Forms.Label();
+            this.card_currencies = new Bunifu.Framework.UI.BunifuCards();
+            this.display_player_shards = new System.Windows.Forms.Label();
+            this.player_shards = new System.Windows.Forms.Label();
+            this.display_player_bloodpoints = new System.Windows.Forms.Label();
+            this.player_bloodpoints = new System.Windows.Forms.Label();
+            this.card_level = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.display_pips_killers = new System.Windows.Forms.Label();
+            this.pips_survivors = new System.Windows.Forms.Label();
+            this.pips_killers = new System.Windows.Forms.Label();
+            this.display_pips_survivors = new System.Windows.Forms.Label();
             this.border.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuCards3.SuspendLayout();
@@ -75,6 +93,8 @@ namespace Kirsty
             this.bunifuCards6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuCards4.SuspendLayout();
+            this.card_currencies.SuspendLayout();
+            this.card_level.SuspendLayout();
             this.bunifuCards1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,7 +193,7 @@ namespace Kirsty
             this.version.Name = "version";
             this.version.Size = new System.Drawing.Size(31, 13);
             this.version.TabIndex = 8;
-            this.version.Text = "1.0.0";
+            this.version.Text = "1.1.0";
             // 
             // bunifuCards3
             // 
@@ -184,7 +204,7 @@ namespace Kirsty
             this.bunifuCards3.Controls.Add(this.stop);
             this.bunifuCards3.Controls.Add(this.start);
             this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(122, 372);
+            this.bunifuCards3.Location = new System.Drawing.Point(15, 377);
             this.bunifuCards3.Margin = new System.Windows.Forms.Padding(10);
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
@@ -229,6 +249,8 @@ namespace Kirsty
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.Transparent;
+            this.bunifuCards2.Controls.Add(this.display_activate_market);
+            this.bunifuCards2.Controls.Add(this.activate_market);
             this.bunifuCards2.Controls.Add(this.display_discord_rpc);
             this.bunifuCards2.Controls.Add(this.discord_rpc);
             this.bunifuCards2.Controls.Add(this.display_market_path);
@@ -240,15 +262,38 @@ namespace Kirsty
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(210, 61);
+            this.bunifuCards2.Size = new System.Drawing.Size(210, 82);
             this.bunifuCards2.TabIndex = 28;
+            // 
+            // display_activate_market
+            // 
+            this.display_activate_market.AutoSize = true;
+            this.display_activate_market.ForeColor = System.Drawing.Color.HotPink;
+            this.display_activate_market.Location = new System.Drawing.Point(98, 40);
+            this.display_activate_market.Name = "display_activate_market";
+            this.display_activate_market.Size = new System.Drawing.Size(29, 13);
+            this.display_activate_market.TabIndex = 8;
+            this.display_activate_market.Text = "false";
+            this.display_activate_market.Click += new System.EventHandler(this.display_activate_market_Click);
+            // 
+            // activate_market
+            // 
+            this.activate_market.AutoSize = true;
+            this.activate_market.Location = new System.Drawing.Point(7, 40);
+            this.activate_market.Margin = new System.Windows.Forms.Padding(3);
+            this.activate_market.Name = "activate_market";
+            this.activate_market.Size = new System.Drawing.Size(85, 13);
+            this.activate_market.TabIndex = 7;
+            this.activate_market.Text = "Activate Market:";
+            this.activate_market.Click += new System.EventHandler(this.activate_market_Click);
             // 
             // display_discord_rpc
             // 
+            this.display_discord_rpc.AutoSize = true;
             this.display_discord_rpc.ForeColor = System.Drawing.Color.HotPink;
-            this.display_discord_rpc.Location = new System.Drawing.Point(90, 40);
+            this.display_discord_rpc.Location = new System.Drawing.Point(98, 55);
             this.display_discord_rpc.Name = "display_discord_rpc";
-            this.display_discord_rpc.Size = new System.Drawing.Size(113, 13);
+            this.display_discord_rpc.Size = new System.Drawing.Size(29, 13);
             this.display_discord_rpc.TabIndex = 6;
             this.display_discord_rpc.Text = "false";
             this.display_discord_rpc.Click += new System.EventHandler(this.display_discord_rpc_Click);
@@ -256,7 +301,7 @@ namespace Kirsty
             // discord_rpc
             // 
             this.discord_rpc.AutoSize = true;
-            this.discord_rpc.Location = new System.Drawing.Point(7, 40);
+            this.discord_rpc.Location = new System.Drawing.Point(7, 55);
             this.discord_rpc.Margin = new System.Windows.Forms.Padding(3);
             this.discord_rpc.Name = "discord_rpc";
             this.discord_rpc.Size = new System.Drawing.Size(77, 13);
@@ -267,9 +312,9 @@ namespace Kirsty
             // display_market_path
             // 
             this.display_market_path.ForeColor = System.Drawing.Color.HotPink;
-            this.display_market_path.Location = new System.Drawing.Point(80, 25);
+            this.display_market_path.Location = new System.Drawing.Point(98, 25);
             this.display_market_path.Name = "display_market_path";
-            this.display_market_path.Size = new System.Drawing.Size(123, 13);
+            this.display_market_path.Size = new System.Drawing.Size(102, 13);
             this.display_market_path.TabIndex = 4;
             this.display_market_path.Text = "unknown";
             this.display_market_path.Click += new System.EventHandler(this.display_market_path_Click);
@@ -289,7 +334,7 @@ namespace Kirsty
             // 
             this.display_autorun_status.AutoSize = true;
             this.display_autorun_status.ForeColor = System.Drawing.Color.HotPink;
-            this.display_autorun_status.Location = new System.Drawing.Point(60, 10);
+            this.display_autorun_status.Location = new System.Drawing.Point(98, 12);
             this.display_autorun_status.Name = "display_autorun_status";
             this.display_autorun_status.Size = new System.Drawing.Size(29, 13);
             this.display_autorun_status.TabIndex = 2;
@@ -333,10 +378,10 @@ namespace Kirsty
             // display_streammer_username
             // 
             this.display_streammer_username.ForeColor = System.Drawing.Color.HotPink;
-            this.display_streammer_username.Location = new System.Drawing.Point(77, 25);
+            this.display_streammer_username.Location = new System.Drawing.Point(99, 25);
             this.display_streammer_username.Margin = new System.Windows.Forms.Padding(10);
             this.display_streammer_username.Name = "display_streammer_username";
-            this.display_streammer_username.Size = new System.Drawing.Size(123, 13);
+            this.display_streammer_username.Size = new System.Drawing.Size(98, 13);
             this.display_streammer_username.TabIndex = 8;
             this.display_streammer_username.Text = "unknown";
             this.display_streammer_username.Click += new System.EventHandler(this.display_streammer_username_Click);
@@ -369,16 +414,60 @@ namespace Kirsty
             this.bunifuCards5.Name = "bunifuCards5";
             this.bunifuCards5.RightSahddow = true;
             this.bunifuCards5.ShadowDepth = 20;
-            this.bunifuCards5.Size = new System.Drawing.Size(210, 61);
+            this.bunifuCards5.Size = new System.Drawing.Size(210, 82);
             this.bunifuCards5.TabIndex = 29;
+            // 
+            // display_player_devotion
+            // 
+            this.display_player_devotion.ForeColor = System.Drawing.Color.HotPink;
+            this.display_player_devotion.Location = new System.Drawing.Point(88, 25);
+            this.display_player_devotion.Margin = new System.Windows.Forms.Padding(10);
+            this.display_player_devotion.Name = "display_player_devotion";
+            this.display_player_devotion.Size = new System.Drawing.Size(109, 13);
+            this.display_player_devotion.TabIndex = 14;
+            this.display_player_devotion.Text = "unknown";
+            this.display_player_devotion.Click += new System.EventHandler(this.display_player_devotion_Click);
+            // 
+            // player_devotion
+            // 
+            this.player_devotion.AutoSize = true;
+            this.player_devotion.Location = new System.Drawing.Point(12, 25);
+            this.player_devotion.Margin = new System.Windows.Forms.Padding(3);
+            this.player_devotion.Name = "player_devotion";
+            this.player_devotion.Size = new System.Drawing.Size(53, 13);
+            this.player_devotion.TabIndex = 13;
+            this.player_devotion.Text = "Devotion:";
+            this.player_devotion.Click += new System.EventHandler(this.player_devotion_Click);
+            // 
+            // display_player_level
+            // 
+            this.display_player_level.ForeColor = System.Drawing.Color.HotPink;
+            this.display_player_level.Location = new System.Drawing.Point(88, 10);
+            this.display_player_level.Margin = new System.Windows.Forms.Padding(10);
+            this.display_player_level.Name = "display_player_level";
+            this.display_player_level.Size = new System.Drawing.Size(109, 13);
+            this.display_player_level.TabIndex = 12;
+            this.display_player_level.Text = "unknown";
+            this.display_player_level.Click += new System.EventHandler(this.display_player_level_Click);
+            // 
+            // player_level
+            // 
+            this.player_level.AutoSize = true;
+            this.player_level.Location = new System.Drawing.Point(12, 10);
+            this.player_level.Margin = new System.Windows.Forms.Padding(3);
+            this.player_level.Name = "player_level";
+            this.player_level.Size = new System.Drawing.Size(36, 13);
+            this.player_level.TabIndex = 11;
+            this.player_level.Text = "Level:";
+            this.player_level.Click += new System.EventHandler(this.player_level_Click);
             // 
             // display_friend_tag
             // 
             this.display_friend_tag.ForeColor = System.Drawing.Color.HotPink;
-            this.display_friend_tag.Location = new System.Drawing.Point(77, 40);
+            this.display_friend_tag.Location = new System.Drawing.Point(99, 40);
             this.display_friend_tag.Margin = new System.Windows.Forms.Padding(10);
             this.display_friend_tag.Name = "display_friend_tag";
-            this.display_friend_tag.Size = new System.Drawing.Size(123, 13);
+            this.display_friend_tag.Size = new System.Drawing.Size(98, 13);
             this.display_friend_tag.TabIndex = 10;
             this.display_friend_tag.Text = "unknown";
             this.display_friend_tag.Click += new System.EventHandler(this.display_friend_tag_Click);
@@ -403,7 +492,7 @@ namespace Kirsty
             this.bunifuCards6.Controls.Add(this.status);
             this.bunifuCards6.Controls.Add(this.label3);
             this.bunifuCards6.LeftSahddow = false;
-            this.bunifuCards6.Location = new System.Drawing.Point(12, 230);
+            this.bunifuCards6.Location = new System.Drawing.Point(12, 324);
             this.bunifuCards6.Name = "bunifuCards6";
             this.bunifuCards6.RightSahddow = true;
             this.bunifuCards6.ShadowDepth = 20;
@@ -450,26 +539,66 @@ namespace Kirsty
             this.bunifuCards4.BorderRadius = 5;
             this.bunifuCards4.BottomSahddow = true;
             this.bunifuCards4.color = System.Drawing.Color.Transparent;
+            this.bunifuCards4.Controls.Add(this.display_killer_rank);
+            this.bunifuCards4.Controls.Add(this.label5);
             this.bunifuCards4.Controls.Add(this.display_queue_position);
             this.bunifuCards4.Controls.Add(this.label4);
             this.bunifuCards4.Controls.Add(this.display_cookie_value);
             this.bunifuCards4.Controls.Add(this.cookie_label);
             this.bunifuCards4.LeftSahddow = false;
-            this.bunifuCards4.Location = new System.Drawing.Point(228, 230);
+            this.bunifuCards4.Location = new System.Drawing.Point(12, 251);
             this.bunifuCards4.Name = "bunifuCards4";
             this.bunifuCards4.RightSahddow = true;
             this.bunifuCards4.ShadowDepth = 20;
-            this.bunifuCards4.Size = new System.Drawing.Size(210, 49);
+            this.bunifuCards4.Size = new System.Drawing.Size(210, 67);
             this.bunifuCards4.TabIndex = 31;
+            // 
+            // display_killer_rank
+            // 
+            this.display_killer_rank.ForeColor = System.Drawing.Color.HotPink;
+            this.display_killer_rank.Location = new System.Drawing.Point(66, 40);
+            this.display_killer_rank.Name = "display_killer_rank";
+            this.display_killer_rank.Size = new System.Drawing.Size(134, 13);
+            this.display_killer_rank.TabIndex = 6;
+            this.display_killer_rank.Text = "not found";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 40);
+            this.label5.Margin = new System.Windows.Forms.Padding(3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Killer rank:";
+            // 
+            // display_queue_position
+            // 
+            this.display_queue_position.ForeColor = System.Drawing.Color.HotPink;
+            this.display_queue_position.Location = new System.Drawing.Point(66, 25);
+            this.display_queue_position.Name = "display_queue_position";
+            this.display_queue_position.Size = new System.Drawing.Size(134, 13);
+            this.display_queue_position.TabIndex = 4;
+            this.display_queue_position.Text = "not found";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Queue:";
             // 
             // display_cookie_value
             // 
             this.display_cookie_value.ForeColor = System.Drawing.Color.HotPink;
-            this.display_cookie_value.Location = new System.Drawing.Point(56, 10);
+            this.display_cookie_value.Location = new System.Drawing.Point(66, 10);
             this.display_cookie_value.Name = "display_cookie_value";
-            this.display_cookie_value.Size = new System.Drawing.Size(144, 13);
+            this.display_cookie_value.Size = new System.Drawing.Size(134, 13);
             this.display_cookie_value.TabIndex = 2;
-            this.display_cookie_value.Text = "unknown";
+            this.display_cookie_value.Text = "not found";
             this.display_cookie_value.Click += new System.EventHandler(this.display_cookie_value_Click);
             // 
             // cookie_label
@@ -483,70 +612,181 @@ namespace Kirsty
             this.cookie_label.Text = "Cookie:";
             this.cookie_label.Click += new System.EventHandler(this.cookie_label_Click);
             // 
+            // display_player_cells
+            // 
+            this.display_player_cells.ForeColor = System.Drawing.Color.HotPink;
+            this.display_player_cells.Location = new System.Drawing.Point(88, 10);
+            this.display_player_cells.Margin = new System.Windows.Forms.Padding(10);
+            this.display_player_cells.Name = "display_player_cells";
+            this.display_player_cells.Size = new System.Drawing.Size(109, 13);
+            this.display_player_cells.TabIndex = 16;
+            this.display_player_cells.Text = "unknown";
+            this.display_player_cells.Click += new System.EventHandler(this.display_player_cells_Click);
+            // 
+            // player_cells
+            // 
+            this.player_cells.AutoSize = true;
+            this.player_cells.Location = new System.Drawing.Point(10, 10);
+            this.player_cells.Margin = new System.Windows.Forms.Padding(3);
+            this.player_cells.Name = "player_cells";
+            this.player_cells.Size = new System.Drawing.Size(32, 13);
+            this.player_cells.TabIndex = 15;
+            this.player_cells.Text = "Cells:";
+            this.player_cells.Click += new System.EventHandler(this.player_cells_Click);
+            // 
+            // card_currencies
+            // 
+            this.card_currencies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
+            this.card_currencies.BorderRadius = 5;
+            this.card_currencies.BottomSahddow = true;
+            this.card_currencies.color = System.Drawing.Color.Transparent;
+            this.card_currencies.Controls.Add(this.display_player_bloodpoints);
+            this.card_currencies.Controls.Add(this.player_bloodpoints);
+            this.card_currencies.Controls.Add(this.display_player_shards);
+            this.card_currencies.Controls.Add(this.player_shards);
+            this.card_currencies.Controls.Add(this.display_player_cells);
+            this.card_currencies.Controls.Add(this.player_cells);
+            this.card_currencies.LeftSahddow = false;
+            this.card_currencies.Location = new System.Drawing.Point(228, 251);
+            this.card_currencies.Name = "card_currencies";
+            this.card_currencies.RightSahddow = true;
+            this.card_currencies.ShadowDepth = 20;
+            this.card_currencies.Size = new System.Drawing.Size(210, 67);
+            this.card_currencies.TabIndex = 32;
+            // 
+            // display_player_shards
+            // 
+            this.display_player_shards.ForeColor = System.Drawing.Color.HotPink;
+            this.display_player_shards.Location = new System.Drawing.Point(88, 25);
+            this.display_player_shards.Margin = new System.Windows.Forms.Padding(10);
+            this.display_player_shards.Name = "display_player_shards";
+            this.display_player_shards.Size = new System.Drawing.Size(109, 13);
+            this.display_player_shards.TabIndex = 18;
+            this.display_player_shards.Text = "unknown";
+            this.display_player_shards.Click += new System.EventHandler(this.display_player_shards_Click);
+            // 
+            // player_shards
+            // 
+            this.player_shards.AutoSize = true;
+            this.player_shards.Location = new System.Drawing.Point(10, 25);
+            this.player_shards.Margin = new System.Windows.Forms.Padding(3);
+            this.player_shards.Name = "player_shards";
+            this.player_shards.Size = new System.Drawing.Size(43, 13);
+            this.player_shards.TabIndex = 17;
+            this.player_shards.Text = "Shards:";
+            this.player_shards.Click += new System.EventHandler(this.player_shards_Click);
+            // 
+            // display_player_bloodpoints
+            // 
+            this.display_player_bloodpoints.ForeColor = System.Drawing.Color.HotPink;
+            this.display_player_bloodpoints.Location = new System.Drawing.Point(88, 40);
+            this.display_player_bloodpoints.Margin = new System.Windows.Forms.Padding(10);
+            this.display_player_bloodpoints.Name = "display_player_bloodpoints";
+            this.display_player_bloodpoints.Size = new System.Drawing.Size(109, 13);
+            this.display_player_bloodpoints.TabIndex = 20;
+            this.display_player_bloodpoints.Text = "unknown";
+            this.display_player_bloodpoints.Click += new System.EventHandler(this.display_player_bloodpoints_Click);
+            // 
+            // player_bloodpoints
+            // 
+            this.player_bloodpoints.AutoSize = true;
+            this.player_bloodpoints.Location = new System.Drawing.Point(10, 40);
+            this.player_bloodpoints.Margin = new System.Windows.Forms.Padding(3);
+            this.player_bloodpoints.Name = "player_bloodpoints";
+            this.player_bloodpoints.Size = new System.Drawing.Size(65, 13);
+            this.player_bloodpoints.TabIndex = 19;
+            this.player_bloodpoints.Text = "Bloodpoints:";
+            this.player_bloodpoints.Click += new System.EventHandler(this.player_bloodpoints_Click);
+            // 
+            // card_level
+            // 
+            this.card_level.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
+            this.card_level.BorderRadius = 5;
+            this.card_level.BottomSahddow = true;
+            this.card_level.color = System.Drawing.Color.Transparent;
+            this.card_level.Controls.Add(this.display_player_devotion);
+            this.card_level.Controls.Add(this.player_level);
+            this.card_level.Controls.Add(this.player_devotion);
+            this.card_level.Controls.Add(this.display_player_level);
+            this.card_level.LeftSahddow = false;
+            this.card_level.Location = new System.Drawing.Point(228, 324);
+            this.card_level.Name = "card_level";
+            this.card_level.RightSahddow = true;
+            this.card_level.ShadowDepth = 20;
+            this.card_level.Size = new System.Drawing.Size(210, 53);
+            this.card_level.TabIndex = 33;
+            // 
             // bunifuCards1
             // 
             this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(22)))), ((int)(((byte)(28)))));
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.Transparent;
-            this.bunifuCards1.Controls.Add(this.display_unlock_tomes);
-            this.bunifuCards1.Controls.Add(this.unlock_tomes);
+            this.bunifuCards1.Controls.Add(this.display_pips_killers);
+            this.bunifuCards1.Controls.Add(this.pips_survivors);
+            this.bunifuCards1.Controls.Add(this.pips_killers);
+            this.bunifuCards1.Controls.Add(this.display_pips_survivors);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(12, 270);
+            this.bunifuCards1.Location = new System.Drawing.Point(228, 383);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(210, 89);
-            this.bunifuCards1.TabIndex = 31;
+            this.bunifuCards1.Size = new System.Drawing.Size(210, 53);
+            this.bunifuCards1.TabIndex = 34;
             // 
-            // display_unlock_tomes
+            // display_pips_killers
             // 
-            this.display_unlock_tomes.AutoSize = true;
-            this.display_unlock_tomes.ForeColor = System.Drawing.Color.HotPink;
-            this.display_unlock_tomes.Location = new System.Drawing.Point(92, 10);
-            this.display_unlock_tomes.Name = "display_unlock_tomes";
-            this.display_unlock_tomes.Size = new System.Drawing.Size(29, 13);
-            this.display_unlock_tomes.TabIndex = 2;
-            this.display_unlock_tomes.Text = "false";
-            this.display_unlock_tomes.Click += new System.EventHandler(this.display_unlock_tomes_Click);
+            this.display_pips_killers.ForeColor = System.Drawing.Color.HotPink;
+            this.display_pips_killers.Location = new System.Drawing.Point(88, 25);
+            this.display_pips_killers.Margin = new System.Windows.Forms.Padding(10);
+            this.display_pips_killers.Name = "display_pips_killers";
+            this.display_pips_killers.Size = new System.Drawing.Size(109, 13);
+            this.display_pips_killers.TabIndex = 14;
+            this.display_pips_killers.Text = "unknown";
+            this.display_pips_killers.Click += new System.EventHandler(this.display_pips_killers_Click);
             // 
-            // unlock_tomes
+            // pips_survivors
             // 
-            this.unlock_tomes.AutoSize = true;
-            this.unlock_tomes.Location = new System.Drawing.Point(7, 10);
-            this.unlock_tomes.Margin = new System.Windows.Forms.Padding(3);
-            this.unlock_tomes.Name = "unlock_tomes";
-            this.unlock_tomes.Size = new System.Drawing.Size(75, 13);
-            this.unlock_tomes.TabIndex = 1;
-            this.unlock_tomes.Text = "Unlock tomes:";
-            this.unlock_tomes.Click += new System.EventHandler(this.unlock_tomes_Click);
+            this.pips_survivors.AutoSize = true;
+            this.pips_survivors.Location = new System.Drawing.Point(12, 10);
+            this.pips_survivors.Margin = new System.Windows.Forms.Padding(3);
+            this.pips_survivors.Name = "pips_survivors";
+            this.pips_survivors.Size = new System.Drawing.Size(70, 13);
+            this.pips_survivors.TabIndex = 11;
+            this.pips_survivors.Text = "Pips survivor:";
+            this.pips_survivors.Click += new System.EventHandler(this.pips_survivors_Click);
             // 
-            // display_queue_position
+            // pips_killers
             // 
-            this.display_queue_position.ForeColor = System.Drawing.Color.HotPink;
-            this.display_queue_position.Location = new System.Drawing.Point(56, 25);
-            this.display_queue_position.Name = "display_queue_position";
-            this.display_queue_position.Size = new System.Drawing.Size(144, 13);
-            this.display_queue_position.TabIndex = 4;
-            this.display_queue_position.Text = "unknown";
+            this.pips_killers.AutoSize = true;
+            this.pips_killers.Location = new System.Drawing.Point(12, 25);
+            this.pips_killers.Margin = new System.Windows.Forms.Padding(3);
+            this.pips_killers.Name = "pips_killers";
+            this.pips_killers.Size = new System.Drawing.Size(59, 13);
+            this.pips_killers.TabIndex = 13;
+            this.pips_killers.Text = "Pips killers:";
+            this.pips_killers.Click += new System.EventHandler(this.pips_killers_Click);
             // 
-            // label4
+            // display_pips_survivors
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 25);
-            this.label4.Margin = new System.Windows.Forms.Padding(3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Queue:";
+            this.display_pips_survivors.ForeColor = System.Drawing.Color.HotPink;
+            this.display_pips_survivors.Location = new System.Drawing.Point(88, 10);
+            this.display_pips_survivors.Margin = new System.Windows.Forms.Padding(10);
+            this.display_pips_survivors.Name = "display_pips_survivors";
+            this.display_pips_survivors.Size = new System.Drawing.Size(109, 13);
+            this.display_pips_survivors.TabIndex = 12;
+            this.display_pips_survivors.Text = "unknown";
+            this.display_pips_survivors.Click += new System.EventHandler(this.display_pips_survivors_Click);
             // 
             // Kirsty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(450, 450);
+            this.ClientSize = new System.Drawing.Size(450, 451);
             this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.card_level);
+            this.Controls.Add(this.card_currencies);
             this.Controls.Add(this.bunifuCards4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuCards6);
@@ -575,6 +815,10 @@ namespace Kirsty
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuCards4.ResumeLayout(false);
             this.bunifuCards4.PerformLayout();
+            this.card_currencies.ResumeLayout(false);
+            this.card_currencies.PerformLayout();
+            this.card_level.ResumeLayout(false);
+            this.card_level.PerformLayout();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.ResumeLayout(false);
@@ -615,11 +859,29 @@ namespace Kirsty
         private Bunifu.Framework.UI.BunifuCards bunifuCards4;
         private System.Windows.Forms.Label display_cookie_value;
         private System.Windows.Forms.Label cookie_label;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private System.Windows.Forms.Label display_unlock_tomes;
-        private System.Windows.Forms.Label unlock_tomes;
         private System.Windows.Forms.Label display_queue_position;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label display_activate_market;
+        private System.Windows.Forms.Label activate_market;
+        private System.Windows.Forms.Label display_killer_rank;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label display_player_level;
+        private System.Windows.Forms.Label player_level;
+        private System.Windows.Forms.Label display_player_devotion;
+        private System.Windows.Forms.Label player_devotion;
+        private System.Windows.Forms.Label display_player_cells;
+        private System.Windows.Forms.Label player_cells;
+        private Bunifu.Framework.UI.BunifuCards card_currencies;
+        private System.Windows.Forms.Label display_player_bloodpoints;
+        private System.Windows.Forms.Label player_bloodpoints;
+        private System.Windows.Forms.Label display_player_shards;
+        private System.Windows.Forms.Label player_shards;
+        private Bunifu.Framework.UI.BunifuCards card_level;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private System.Windows.Forms.Label display_pips_killers;
+        private System.Windows.Forms.Label pips_survivors;
+        private System.Windows.Forms.Label pips_killers;
+        private System.Windows.Forms.Label display_pips_survivors;
     }
 }
 

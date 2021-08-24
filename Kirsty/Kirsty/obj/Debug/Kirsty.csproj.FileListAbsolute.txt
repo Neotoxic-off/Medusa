@@ -82,3 +82,7 @@ C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\Te
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\DiscordRPC.dll
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\DiscordRPC.pdb
 C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\DiscordRPC.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\RestSharp.dll
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\bin\Debug\RestSharp.xml
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\obj\Debug\Kirsty.form.edit_number.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Kirsty\Kirsty\obj\Debug\Kirsty.form.edit_pips.resources
