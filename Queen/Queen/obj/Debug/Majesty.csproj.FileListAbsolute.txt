@@ -1,0 +1,10 @@
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\bin\Debug\Majesty.exe.config
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\bin\Debug\Majesty.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\bin\Debug\Majesty.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\obj\Debug\Majesty.csproj.AssemblyReference.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\obj\Debug\Majesty.Properties.Resources.resources
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\obj\Debug\Majesty.csproj.GenerateResource.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\obj\Debug\Majesty.csproj.CoreCompileInputs.cache
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\obj\Debug\Majesty.exe
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\obj\Debug\Majesty.pdb
+C:\Users\paulg\Documents\Code\DEAD BY DAYLIGHT\Medusa\Majesty\Majesty\obj\Debug\Majesty.Majesty.resources

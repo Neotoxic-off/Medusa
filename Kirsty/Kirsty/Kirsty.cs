@@ -25,6 +25,10 @@ namespace Kirsty
         classes.player.Rootobject player = null;
         classes.currencies.Rootobject currencies = null;
         classes.pips.Rootobject pips = null;
+        classes.earnplayer.Rootobject earnplayer = null;
+        classes.party.Rootobject party = null;
+        classes.characters.Rootobject characters = null;
+        classes.analytics.gamedata.Rootobject analytics = null;
 
         DiscordRpcClient client = null;
 
@@ -32,6 +36,7 @@ namespace Kirsty
 
         static string folder = "resources";
         static string file = "Settings.json";
+        static string characters_settings = "Characters.json";
 
         public Kirsty()
         {
@@ -155,6 +160,7 @@ namespace Kirsty
 
             display_streammer_status.Text = $"{settings.streammer.activated}";
             display_streammer_username.Text = $"{settings.streammer.username}";
+            display_remove_penality.Text = $"{settings.streammer.penality}";
             display_player_level.Text = $"{settings.streammer.level}";
             display_player_devotion.Text = $"{settings.streammer.devotion}";
 
@@ -212,22 +218,50 @@ namespace Kirsty
             return (Task.CompletedTask);
         }
 
+        private Task load_characters()
+        {
+            update_status($"loading characters").Wait();
+            try
+            {
+                characters = JsonConvert.DeserializeObject<classes.characters.Rootobject>(
+                    File.ReadAllText($"{folder}\\{characters_settings}")
+                );
+                update_status($"characters loaded").Wait();
+            }
+            catch (Exception ex)
+            {
+                BOX($"Wrong characters format:\n{ex}", $"Error: characters format", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+
+            return (Task.CompletedTask);
+        }
+
         private void Kirsty_Load(object sender, EventArgs e)
         {
             if (Directory.Exists(folder) == true)
             {
                 if (File.Exists($"{folder}\\{file}") == true)
                 {
-                    update_settings().Wait();
-                    if (settings.autorun == true)
+                    if (File.Exists($"{folder}\\{characters_settings}") == true)
                     {
-                        autorun().Wait();
+                        load_characters().Wait();
+                        update_settings().Wait();
+                        if (settings.autorun == true)
+                        {
+                            autorun().Wait();
+                        }
+                        if (settings.discord == true)
+                        {
+                            autodiscord().Wait();
+                        }
+                        update_ui().Wait();
                     }
-                    if (settings.discord == true)
+                    else
                     {
-                        autodiscord().Wait();
+                        BOX($"{folder}\\{characters_settings} file not found", "Error: characters file", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Close();
                     }
-                    update_ui().Wait();
                 }
                 else
                 {
@@ -272,6 +306,89 @@ namespace Kirsty
             GSU().Wait();
         }
 
+        private int pips_to_rank(int pips)
+        {
+            Dictionary<int, int> ranks = new Dictionary<int, int>()
+            {
+                { 20, 0 },
+                { 19, 3 },
+                { 18, 6 },
+                { 17, 10 },
+                { 16, 14 },
+                { 15, 18 },
+                { 14, 22 },
+                { 13, 26 },
+                { 12, 30 },
+                { 11, 35 },
+                { 10, 40 },
+                { 9, 45 },
+                { 8, 50 },
+                { 7, 55 },
+                { 6, 60 },
+                { 5, 65 },
+                { 4, 70 },
+                { 3, 75 },
+                { 2, 80 },
+                { 1, 85 }
+            };
+            return (ranks[pips]);
+        }
+
+        private int get_character_rank(int id)
+        {
+            bool found = false;
+
+            for (int i = 0; i < characters.survivors.Count; i++)
+            {
+                if (characters.survivors[i].id == id)
+                {
+                    found = true;
+                    return (settings.streammer.pips.survivors);
+                }
+            }
+            for (int i = 0; i < characters.killers.Count; i++)
+            {
+                if (characters.killers[i].id == id)
+                {
+                    found = true;
+                    return (settings.streammer.pips.killers);
+                }
+            }
+            if (found == false)
+            {
+                if (characters.killers.Count > 0)
+                {
+                    BOX($"Character id: '{id}' hasn't been found, please update settings file: {folder}\\{characters_settings}", "Error: character not found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (id < characters.killers[0].id)
+                    {
+                        update_status("autodetection: survivor").Wait();
+                        return (settings.streammer.pips.survivors);
+                    }
+                    else
+                    {
+                        update_status("autodetection: killer").Wait();
+                        return (settings.streammer.pips.killers);
+                    }
+                }
+                else
+                {
+                    BOX($"No killer has been found in characters settings file, make sure your characters settings file is the lastest one", "Error: character settings no killer", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (id < 268435456)
+                    {
+                        update_status("autodetection: survivor").Wait();
+                        return (settings.streammer.pips.survivors);
+                    }
+                    else
+                    {
+                        update_status("autodetection: killer").Wait();
+                        return (settings.streammer.pips.killers);
+                    }
+                }
+            }
+
+            return (settings.streammer.pips.survivors);
+        }
+
         private void Streammer_mod(Session sess)
         {
             Dictionary<string, int> ids = new Dictionary<string, int>()
@@ -294,7 +411,7 @@ namespace Kirsty
 
                 sess.utilSetResponseBody(JsonConvert.SerializeObject(playername));
             }
-            if (sess.fullUrl.Contains("/v1/playername/steam") == true)
+            if (sess.fullUrl.Contains("/v1/playername/steam/") == true)
             {
                 sess.bBufferResponse = true;
 
@@ -307,20 +424,7 @@ namespace Kirsty
 
                 sess.utilSetResponseBody(JsonConvert.SerializeObject(steam));
             }
-            if (sess.fullUrl.Contains("/v1/extensions/playerLevel") == true)
-            {
-                sess.bBufferResponse = true;
-
-                sess.utilDecodeResponse();
-                player = JsonConvert.DeserializeObject<classes.player.Rootobject>(
-                    sess.GetResponseBodyAsString()
-                );
-                player.level = settings.streammer.level;
-                player.prestigeLevel = settings.streammer.devotion;
-
-                sess.utilSetResponseBody(JsonConvert.SerializeObject(steam));
-            }
-            if (sess.fullUrl.Contains("/v1/wallet/currencies") == true)
+            if (sess.fullUrl.Contains("/v1/wallet/currencies") == true || sess.fullUrl.Contains("/v1/extensions/wallet/getLocalizedCurrenciesAfterLogin") == true)
             {
                 sess.bBufferResponse = true;
 
@@ -333,7 +437,6 @@ namespace Kirsty
                     if (ids.ContainsKey(currencies.list[i].currency) == true)
                         currencies.list[i].balance = ids[currencies.list[i].currency];
                 }
-
                 sess.utilSetResponseBody(JsonConvert.SerializeObject(currencies));
             }
             if (sess.fullUrl.Contains("/v1/ranks/reset-get-pips-v2") == true)
@@ -348,6 +451,32 @@ namespace Kirsty
                 pips.pips.killerPips = settings.streammer.pips.killers;
 
                 sess.utilSetResponseBody(JsonConvert.SerializeObject(pips));
+            }
+            if (sess.fullUrl.Contains("/v1/extensions/playerLevels/getPlayerLevel") == true)
+            {
+                sess.bBufferResponse = true;
+
+                sess.utilDecodeResponse();
+                player = JsonConvert.DeserializeObject<classes.player.Rootobject>(
+                    sess.GetResponseBodyAsString()
+                );
+                player.level = settings.streammer.level;
+                player.prestigeLevel = settings.streammer.devotion;
+
+                sess.utilSetResponseBody(JsonConvert.SerializeObject(steam));
+            }
+            if (sess.fullUrl.Contains("/v1/extensions/playerLevels/earnPlayerXp") == true)
+            {
+                sess.bBufferResponse = true;
+
+                sess.utilDecodeResponse();
+                earnplayer = JsonConvert.DeserializeObject<classes.earnplayer.Rootobject>(
+                    sess.GetResponseBodyAsString()
+                );
+                earnplayer.levelInfo.level = settings.streammer.level;
+                earnplayer.levelInfo.prestigeLevel = settings.streammer.devotion;
+
+                sess.utilSetResponseBody(JsonConvert.SerializeObject(earnplayer));
             }
         }
 
@@ -407,7 +536,7 @@ namespace Kirsty
                                     matched = JsonConvert.DeserializeObject<classes.matched.Rootobject>(
                                         sess.GetResponseBodyAsString()
                                     );
-                                    display_killer_rank.Text = $"{matched.matchData.matchId}";
+                                    display_killer_rank.Text = $"{matched.matchData.skill.rank}";
                                 }
                             } catch (Exception ex)
                             {
@@ -416,8 +545,6 @@ namespace Kirsty
                             }
                         }));
                     }
-                    
-
                     if (settings.streammer.activated == true)
                     {
                         Streammer_mod(sess);
@@ -431,6 +558,43 @@ namespace Kirsty
         private void FiddlerApplication_BeforeRequest(Session oSession)
         {
             oSession.bBufferResponse = true;
+
+            if (settings.streammer.activated == true)
+            {
+                if (oSession.fullUrl.Contains("/v1/party/player/") == true && oSession.fullUrl.Contains("/state") == true)
+                {
+                    oSession.utilDecodeRequest();
+                    party = JsonConvert.DeserializeObject<classes.party.Rootobject>(
+                        oSession.GetRequestBodyAsString()
+                    );
+                    party.body._playerName = settings.streammer.username;
+                    party.body._playerRank = pips_to_rank(get_character_rank(party.body._characterId));
+                    if (settings.streammer.penality == true)
+                        party.body._disconnectionPenaltyEndOfBan = 0;
+
+                    oSession.utilSetRequestBody(JsonConvert.SerializeObject(party));
+                }
+                if (oSession.fullUrl.Contains("/v1/playername/steam/") == true)
+                {
+                    BOX($"{get_usernamer(oSession.fullUrl)}", "Previous", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    update_status($"{get_usernamer(oSession.fullUrl)}").Wait();
+                    oSession.fullUrl = oSession.fullUrl.Replace(get_usernamer(oSession.fullUrl), settings.streammer.username);
+                    BOX($"{get_usernamer(oSession.fullUrl)}", "After", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            if (oSession.fullUrl.Contains("/v1/gameDataAnalytics/v2/batch") == true)
+            {
+                analytics = JsonConvert.DeserializeObject<classes.analytics.gamedata.Rootobject>(oSession.GetRequestBodyAsString());
+                for (int i = 0; i < analytics.events.Count; i++)
+                {
+                    if (analytics.events[i].eventType == "queue")
+                    {
+                        if (analytics.events[i].data.player_name != null)
+                            analytics.events[i].data.player_name = settings.streammer.username;
+                    }
+                }
+                oSession.utilSetRequestBody(JsonConvert.SerializeObject(analytics));
+            }
         }
 
         public void Start()
@@ -456,6 +620,20 @@ namespace Kirsty
                 FiddlerApplication.Shutdown();
 
             update_status("stopped").Wait();
+        }
+
+        private string get_usernamer(string url)
+        {
+            string[] splitted = url.Split('/');
+
+            if (splitted.Length >= 2)
+            {
+                if (url.EndsWith("/") == false)
+                    return (splitted[splitted.Length - 1]);
+                return (splitted[splitted.Length - 2]);
+            }
+
+            return (splitted[splitted.Length - 1]);
         }
 
         public bool InstallCertificate()
@@ -682,8 +860,9 @@ namespace Kirsty
         private void Kirsty_FormClosing(object sender, FormClosingEventArgs e)
         {
             autostop().Wait();
-            if (settings.discord == true)
-                Deinitialize();
+            if (settings != null)
+                if (settings.discord == true)
+                    Deinitialize();
         }
 
         private void friend_tag_Click(object sender, EventArgs e)
@@ -893,6 +1072,56 @@ namespace Kirsty
         private void pips_survivors_Click(object sender, EventArgs e)
         {
             GSP().Wait();
+        }
+
+        private void display_killer_rank_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private Task GRP()
+        {
+            Cursor = Cursors.WaitCursor;
+            if (settings.streammer.penality == true)
+            {
+                settings.streammer.penality = false;
+            }
+            else
+            {
+                settings.streammer.penality = true;
+            }
+            save_settings().Wait();
+            update_ui().Wait();
+            Cursor = Cursors.Default;
+
+            return (Task.CompletedTask);
+        }
+
+        private void remove_penality_Click(object sender, EventArgs e)
+        {
+            GRP().Wait();
+        }
+
+        private void display_remove_penality_Click(object sender, EventArgs e)
+        {
+            GRP().Wait();
+        }
+
+        private string RequestAsync(string url, string json, string cookie)
+        {
+            var client = new RestClient();
+            RestRequest request = new RestRequest(url);
+
+            request.AddHeader("Accept-Encoding", "deflate, gzip");
+            request.AddHeader("Accept", "*/*");
+            request.AddHeader("Content-Type", "application/json");
+            request.AddCookie("bhvrSession", cookie);
+            if (json != null)
+                request.AddJsonBody(json);
+            client.UserAgent = "DeadByDaylight/++DeadByDaylight+Live-CL-377698 Windows/10.0.19042.1.768.64bit";
+            IRestResponse response = client.Post(request);
+
+            return (response.Content);
         }
     }
 }

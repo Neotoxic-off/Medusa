@@ -54,12 +54,14 @@ namespace Kirsty
             this.display_streammer_username = new System.Windows.Forms.Label();
             this.streammer_username = new System.Windows.Forms.Label();
             this.bunifuCards5 = new Bunifu.Framework.UI.BunifuCards();
+            this.display_remove_penality = new System.Windows.Forms.Label();
+            this.remove_penality = new System.Windows.Forms.Label();
+            this.display_friend_tag = new System.Windows.Forms.Label();
+            this.friend_tag = new System.Windows.Forms.Label();
             this.display_player_devotion = new System.Windows.Forms.Label();
             this.player_devotion = new System.Windows.Forms.Label();
             this.display_player_level = new System.Windows.Forms.Label();
             this.player_level = new System.Windows.Forms.Label();
-            this.display_friend_tag = new System.Windows.Forms.Label();
-            this.friend_tag = new System.Windows.Forms.Label();
             this.bunifuCards6 = new Bunifu.Framework.UI.BunifuCards();
             this.status = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,10 +77,10 @@ namespace Kirsty
             this.display_player_cells = new System.Windows.Forms.Label();
             this.player_cells = new System.Windows.Forms.Label();
             this.card_currencies = new Bunifu.Framework.UI.BunifuCards();
-            this.display_player_shards = new System.Windows.Forms.Label();
-            this.player_shards = new System.Windows.Forms.Label();
             this.display_player_bloodpoints = new System.Windows.Forms.Label();
             this.player_bloodpoints = new System.Windows.Forms.Label();
+            this.display_player_shards = new System.Windows.Forms.Label();
+            this.player_shards = new System.Windows.Forms.Label();
             this.card_level = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.display_pips_killers = new System.Windows.Forms.Label();
@@ -204,12 +206,12 @@ namespace Kirsty
             this.bunifuCards3.Controls.Add(this.stop);
             this.bunifuCards3.Controls.Add(this.start);
             this.bunifuCards3.LeftSahddow = false;
-            this.bunifuCards3.Location = new System.Drawing.Point(15, 377);
+            this.bunifuCards3.Location = new System.Drawing.Point(15, 383);
             this.bunifuCards3.Margin = new System.Windows.Forms.Padding(10);
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(210, 59);
+            this.bunifuCards3.Size = new System.Drawing.Size(210, 53);
             this.bunifuCards3.TabIndex = 29;
             // 
             // stop
@@ -219,7 +221,7 @@ namespace Kirsty
             this.stop.FlatAppearance.BorderSize = 0;
             this.stop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stop.ForeColor = System.Drawing.Color.DimGray;
-            this.stop.Location = new System.Drawing.Point(115, 20);
+            this.stop.Location = new System.Drawing.Point(115, 16);
             this.stop.Margin = new System.Windows.Forms.Padding(20);
             this.stop.Name = "stop";
             this.stop.Size = new System.Drawing.Size(75, 23);
@@ -234,7 +236,7 @@ namespace Kirsty
             this.start.FlatAppearance.BorderSize = 0;
             this.start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.start.ForeColor = System.Drawing.Color.DimGray;
-            this.start.Location = new System.Drawing.Point(20, 20);
+            this.start.Location = new System.Drawing.Point(20, 16);
             this.start.Margin = new System.Windows.Forms.Padding(20);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(75, 23);
@@ -403,6 +405,8 @@ namespace Kirsty
             this.bunifuCards5.BorderRadius = 5;
             this.bunifuCards5.BottomSahddow = true;
             this.bunifuCards5.color = System.Drawing.Color.Transparent;
+            this.bunifuCards5.Controls.Add(this.display_remove_penality);
+            this.bunifuCards5.Controls.Add(this.remove_penality);
             this.bunifuCards5.Controls.Add(this.display_friend_tag);
             this.bunifuCards5.Controls.Add(this.friend_tag);
             this.bunifuCards5.Controls.Add(this.display_streammer_username);
@@ -416,6 +420,51 @@ namespace Kirsty
             this.bunifuCards5.ShadowDepth = 20;
             this.bunifuCards5.Size = new System.Drawing.Size(210, 82);
             this.bunifuCards5.TabIndex = 29;
+            // 
+            // display_remove_penality
+            // 
+            this.display_remove_penality.AutoSize = true;
+            this.display_remove_penality.ForeColor = System.Drawing.Color.HotPink;
+            this.display_remove_penality.Location = new System.Drawing.Point(99, 55);
+            this.display_remove_penality.Margin = new System.Windows.Forms.Padding(10);
+            this.display_remove_penality.Name = "display_remove_penality";
+            this.display_remove_penality.Size = new System.Drawing.Size(29, 13);
+            this.display_remove_penality.TabIndex = 12;
+            this.display_remove_penality.Text = "false";
+            this.display_remove_penality.Click += new System.EventHandler(this.display_remove_penality_Click);
+            // 
+            // remove_penality
+            // 
+            this.remove_penality.AutoSize = true;
+            this.remove_penality.Location = new System.Drawing.Point(10, 55);
+            this.remove_penality.Margin = new System.Windows.Forms.Padding(3);
+            this.remove_penality.Name = "remove_penality";
+            this.remove_penality.Size = new System.Drawing.Size(89, 13);
+            this.remove_penality.TabIndex = 11;
+            this.remove_penality.Text = "Remove penality:";
+            this.remove_penality.Click += new System.EventHandler(this.remove_penality_Click);
+            // 
+            // display_friend_tag
+            // 
+            this.display_friend_tag.ForeColor = System.Drawing.Color.HotPink;
+            this.display_friend_tag.Location = new System.Drawing.Point(99, 40);
+            this.display_friend_tag.Margin = new System.Windows.Forms.Padding(10);
+            this.display_friend_tag.Name = "display_friend_tag";
+            this.display_friend_tag.Size = new System.Drawing.Size(98, 13);
+            this.display_friend_tag.TabIndex = 10;
+            this.display_friend_tag.Text = "unknown";
+            this.display_friend_tag.Click += new System.EventHandler(this.display_friend_tag_Click);
+            // 
+            // friend_tag
+            // 
+            this.friend_tag.AutoSize = true;
+            this.friend_tag.Location = new System.Drawing.Point(10, 40);
+            this.friend_tag.Margin = new System.Windows.Forms.Padding(3);
+            this.friend_tag.Name = "friend_tag";
+            this.friend_tag.Size = new System.Drawing.Size(57, 13);
+            this.friend_tag.TabIndex = 9;
+            this.friend_tag.Text = "Friend tag:";
+            this.friend_tag.Click += new System.EventHandler(this.friend_tag_Click);
             // 
             // display_player_devotion
             // 
@@ -460,28 +509,6 @@ namespace Kirsty
             this.player_level.TabIndex = 11;
             this.player_level.Text = "Level:";
             this.player_level.Click += new System.EventHandler(this.player_level_Click);
-            // 
-            // display_friend_tag
-            // 
-            this.display_friend_tag.ForeColor = System.Drawing.Color.HotPink;
-            this.display_friend_tag.Location = new System.Drawing.Point(99, 40);
-            this.display_friend_tag.Margin = new System.Windows.Forms.Padding(10);
-            this.display_friend_tag.Name = "display_friend_tag";
-            this.display_friend_tag.Size = new System.Drawing.Size(98, 13);
-            this.display_friend_tag.TabIndex = 10;
-            this.display_friend_tag.Text = "unknown";
-            this.display_friend_tag.Click += new System.EventHandler(this.display_friend_tag_Click);
-            // 
-            // friend_tag
-            // 
-            this.friend_tag.AutoSize = true;
-            this.friend_tag.Location = new System.Drawing.Point(10, 40);
-            this.friend_tag.Margin = new System.Windows.Forms.Padding(3);
-            this.friend_tag.Name = "friend_tag";
-            this.friend_tag.Size = new System.Drawing.Size(57, 13);
-            this.friend_tag.TabIndex = 9;
-            this.friend_tag.Text = "Friend tag:";
-            this.friend_tag.Click += new System.EventHandler(this.friend_tag_Click);
             // 
             // bunifuCards6
             // 
@@ -561,6 +588,7 @@ namespace Kirsty
             this.display_killer_rank.Size = new System.Drawing.Size(134, 13);
             this.display_killer_rank.TabIndex = 6;
             this.display_killer_rank.Text = "not found";
+            this.display_killer_rank.Click += new System.EventHandler(this.display_killer_rank_Click);
             // 
             // label5
             // 
@@ -654,28 +682,6 @@ namespace Kirsty
             this.card_currencies.Size = new System.Drawing.Size(210, 67);
             this.card_currencies.TabIndex = 32;
             // 
-            // display_player_shards
-            // 
-            this.display_player_shards.ForeColor = System.Drawing.Color.HotPink;
-            this.display_player_shards.Location = new System.Drawing.Point(88, 25);
-            this.display_player_shards.Margin = new System.Windows.Forms.Padding(10);
-            this.display_player_shards.Name = "display_player_shards";
-            this.display_player_shards.Size = new System.Drawing.Size(109, 13);
-            this.display_player_shards.TabIndex = 18;
-            this.display_player_shards.Text = "unknown";
-            this.display_player_shards.Click += new System.EventHandler(this.display_player_shards_Click);
-            // 
-            // player_shards
-            // 
-            this.player_shards.AutoSize = true;
-            this.player_shards.Location = new System.Drawing.Point(10, 25);
-            this.player_shards.Margin = new System.Windows.Forms.Padding(3);
-            this.player_shards.Name = "player_shards";
-            this.player_shards.Size = new System.Drawing.Size(43, 13);
-            this.player_shards.TabIndex = 17;
-            this.player_shards.Text = "Shards:";
-            this.player_shards.Click += new System.EventHandler(this.player_shards_Click);
-            // 
             // display_player_bloodpoints
             // 
             this.display_player_bloodpoints.ForeColor = System.Drawing.Color.HotPink;
@@ -697,6 +703,28 @@ namespace Kirsty
             this.player_bloodpoints.TabIndex = 19;
             this.player_bloodpoints.Text = "Bloodpoints:";
             this.player_bloodpoints.Click += new System.EventHandler(this.player_bloodpoints_Click);
+            // 
+            // display_player_shards
+            // 
+            this.display_player_shards.ForeColor = System.Drawing.Color.HotPink;
+            this.display_player_shards.Location = new System.Drawing.Point(88, 25);
+            this.display_player_shards.Margin = new System.Windows.Forms.Padding(10);
+            this.display_player_shards.Name = "display_player_shards";
+            this.display_player_shards.Size = new System.Drawing.Size(109, 13);
+            this.display_player_shards.TabIndex = 18;
+            this.display_player_shards.Text = "unknown";
+            this.display_player_shards.Click += new System.EventHandler(this.display_player_shards_Click);
+            // 
+            // player_shards
+            // 
+            this.player_shards.AutoSize = true;
+            this.player_shards.Location = new System.Drawing.Point(10, 25);
+            this.player_shards.Margin = new System.Windows.Forms.Padding(3);
+            this.player_shards.Name = "player_shards";
+            this.player_shards.Size = new System.Drawing.Size(43, 13);
+            this.player_shards.TabIndex = 17;
+            this.player_shards.Text = "Shards:";
+            this.player_shards.Click += new System.EventHandler(this.player_shards_Click);
             // 
             // card_level
             // 
@@ -783,7 +811,7 @@ namespace Kirsty
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(42)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(450, 451);
+            this.ClientSize = new System.Drawing.Size(450, 454);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.card_level);
             this.Controls.Add(this.card_currencies);
@@ -882,6 +910,8 @@ namespace Kirsty
         private System.Windows.Forms.Label pips_survivors;
         private System.Windows.Forms.Label pips_killers;
         private System.Windows.Forms.Label display_pips_survivors;
+        private System.Windows.Forms.Label display_remove_penality;
+        private System.Windows.Forms.Label remove_penality;
     }
 }
 

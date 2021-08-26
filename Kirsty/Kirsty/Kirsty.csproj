@@ -161,8 +161,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\analytics\gamedata.cs" />
+    <Compile Include="classes\characters.cs" />
     <Compile Include="classes\currencies.cs" />
+    <Compile Include="classes\earnplayer.cs" />
     <Compile Include="classes\matched.cs" />
+    <Compile Include="classes\party.cs" />
     <Compile Include="classes\pips.cs" />
     <Compile Include="classes\player.cs" />
     <Compile Include="classes\playername.cs" />

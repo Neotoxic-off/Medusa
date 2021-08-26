@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Queen
+namespace Majesty
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Queen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Queen());
+            Application.Run(new Majesty());
         }
     }
 }

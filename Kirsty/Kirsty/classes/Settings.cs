@@ -23,6 +23,7 @@ namespace Kirsty.classes
             public bool activated { get; set; }
             public string username { get; set; }
             public string tag { get; set; }
+            public bool penality { get; set; }
             public int level { get; set; }
             public int devotion { get; set; }
             public Currencies currencies { get; set; }

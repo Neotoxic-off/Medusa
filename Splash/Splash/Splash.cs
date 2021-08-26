@@ -154,8 +154,9 @@ namespace Splash
         {
             Image image = Image.FromFile(imagename);
 
+            if (File.Exists(eac_splash) == true)
+                File.Delete(eac_splash);
             image.Save(eac_splash, ImageFormat.Png);
-            image.Save(dbd_splash, ImageFormat.Bmp);
 
             return (Task.CompletedTask);
         }

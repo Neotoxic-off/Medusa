@@ -40,10 +40,10 @@ namespace Kirsty.form
             }
             else
             {
-                if (n >= 0 && n <= 75)
+                if (n >= 0 && n <= 85)
                     Close();
                 else
-                    MessageBox.Show("Value must be between 0 and 75", "Error: wrong type value", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Value must be between 0 and 85", "Error: wrong type value", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
